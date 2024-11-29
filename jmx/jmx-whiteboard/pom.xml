@@ -81,7 +81,7 @@
         </aries.osgi.import.service>
 
         <exam.version>3.4.0</exam.version>
-        <url.version>1.6.0</url.version>
+        <url.version>2.5.3</url.version>
     </properties>
 
     <build>
@@ -190,6 +190,12 @@
             <groupId>org.ops4j.pax.url</groupId>
             <artifactId>pax-url-aether</artifactId>
             <version>${url.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-atinject_1.0_spec</artifactId>
+            <version>1.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
