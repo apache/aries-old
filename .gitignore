@@ -5,3 +5,6 @@ target
 velocity.log
 .idea
 *.iml
+.factorypath
+.vscode
+.flattened-pom.xml

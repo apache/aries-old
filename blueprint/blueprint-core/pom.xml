@@ -32,7 +32,7 @@
     <artifactId>org.apache.aries.blueprint.core</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Aries Blueprint Core</name>
-    <version>1.10.3-SNAPSHOT</version>
+    <version>1.10.4-SNAPSHOT</version>
     <description>
         This bundle contains the core implementation of Blueprint
         along with the "ext" namespace handler.
@@ -93,11 +93,11 @@
             {maven-resources},
             org/apache/aries/blueprint/blueprint.xsd=${project.build.directory}/sources/org/osgi/service/blueprint/blueprint.xsd
         </aries.osgi.include.resource>
-        <blueprint.annotation.api.version>1.0.0</blueprint.annotation.api.version>
-        <blueprint.api.version>1.0.0</blueprint.api.version>
+        <blueprint.annotation.api.version>1.0.1</blueprint.annotation.api.version>
+        <blueprint.api.version>1.0.1</blueprint.api.version>
         <blueprint.parser.version>1.6.0</blueprint.parser.version>
-        <proxy.api.version>1.1.0</proxy.api.version>
-        <proxy.impl.version>1.1.0</proxy.impl.version>
+        <proxy.api.version>1.1.1</proxy.api.version>
+        <proxy.impl.version>1.1.9</proxy.impl.version>
         <quiesce.api.version>1.0.0</quiesce.api.version>
         <util.version>1.1.3</util.version>
         <lastReleaseVersion>1.6.0</lastReleaseVersion>
@@ -136,7 +136,7 @@
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
             <artifactId>blueprint-parser</artifactId>
-            <version>1.6.0</version>
+            <version>${blueprint.parser.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -163,7 +163,7 @@
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.utils</artifactId>
-            <version>1.10.4</version>
+            <version>1.11.6</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -185,7 +185,7 @@
         <dependency>
             <groupId>org.easymock</groupId>
             <artifactId>easymock</artifactId>
-            <version>3.2</version>
+            <version>4.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
