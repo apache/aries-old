@@ -51,6 +51,7 @@
          <jndi-url.version>${jndi-url.dev-version}</jndi-url.version>
          <jndi-url-itest-web.version>${jndi-url-itest-web.dev-version}</jndi-url-itest-web.version>
          <jndi-url-itest-biz.version>${jndi-url-itest-biz.dev-version}</jndi-url-itest-biz.version>
+         <logback.version>1.5.16</logback.version>
     </properties>
 
     <dependencies>
@@ -165,13 +166,13 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
-            <version>0.9.29</version>
+            <version>${logback.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>0.9.29</version>
+            <version>${logback.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
