@@ -42,7 +42,8 @@
 
     <properties>
         <exam.version>3.4.0</exam.version>
-        <url.version>1.6.0</url.version>
+        <url.version>2.5.3</url.version>
+        <logback.version>1.5.16</logback.version>
     </properties>
 
     <dependencies>
@@ -142,13 +143,13 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
-            <version>0.9.29</version>
+            <version>${logback.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>0.9.29</version>
+            <version>${logback.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
