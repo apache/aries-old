@@ -147,7 +147,7 @@ public class BlueprintNamespaceHandler implements NamespaceHandler, NamespaceHan
         if (applicationContext == null) {
             applicationContext = new SpringApplicationContext(container);
             registry.registerComponentDefinition(createPassThrough(parserContext,
-                    SPRING_APPLICATION_CONTEXT_ID, applicationContext, "destroy"
+                    SPRING_APPLICATION_CONTEXT_ID, applicationContext, "close"
             ));
         }
         // Create registry

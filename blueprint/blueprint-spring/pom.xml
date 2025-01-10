@@ -24,7 +24,7 @@
     <parent>
         <groupId>org.apache.aries.blueprint</groupId>
         <artifactId>blueprint-parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1-SNAPSHOT</version>
         <relativePath>../blueprint-parent/pom.xml</relativePath>
     </parent>
 
@@ -58,9 +58,10 @@
         <aries.osgi.activator>
             org.apache.aries.blueprint.spring.Activator
         </aries.osgi.activator>
-        <blueprint.api.version>1.0.0</blueprint.api.version>
-        <blueprint.core.version>1.9.0</blueprint.core.version>
-        <blueprint.parser.version>1.5.0</blueprint.parser.version>
+        <blueprint.api.version>1.0.1</blueprint.api.version>
+        <blueprint.core.version>1.10.3</blueprint.core.version>
+        <blueprint.parser.version>1.6.1</blueprint.parser.version>
+        <spring.version>5.3.39</spring.version>
         <!--
         <lastReleaseVersion>1.0.4</lastReleaseVersion>
         -->
@@ -119,13 +120,13 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.2.2.RELEASE</version>
+            <version>${spring.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
-            <version>4.2.2.RELEASE</version>
+            <version>${spring.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -178,13 +179,13 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>4.2.2.RELEASE</version>
+            <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
-            <version>4.2.2.RELEASE</version>
+            <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
