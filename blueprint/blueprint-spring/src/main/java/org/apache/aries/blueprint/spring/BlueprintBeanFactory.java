@@ -37,6 +37,7 @@ import org.springframework.beans.factory.BeanDefinitionStoreException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanNotOfRequiredTypeException;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.core.ResolvableType;
@@ -232,6 +233,16 @@ public class BlueprintBeanFactory extends DefaultListableBeanFactory implements 
         }
 
         @Override
+        public <T> ObjectProvider<T> getBeanProvider(Class<T> requiredType) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public <T> ObjectProvider<T> getBeanProvider(ResolvableType requiredType) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
         public boolean containsBean(String name) {
             return container.getComponentIds().contains(name);
         }
@@ -258,6 +269,11 @@ public class BlueprintBeanFactory extends DefaultListableBeanFactory implements 
 
         @Override
         public Class<?> getType(String name) throws NoSuchBeanDefinitionException {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public Class<?> getType(String name, boolean allowFactoryBeanInit) throws NoSuchBeanDefinitionException {
             throw new UnsupportedOperationException();
         }
 
