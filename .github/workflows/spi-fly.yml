@@ -30,6 +30,7 @@ env:
 
 jobs:
   JDKxx_Matrix:
+    timeout-minutes: 10
     strategy:
       matrix:
         java: [ 8, 11, 17, 18, 19-ea ]
