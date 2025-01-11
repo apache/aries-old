@@ -52,6 +52,12 @@
             org.apache.aries.application.converters;
         </aries.osgi.private.pkg>
         <lastReleaseVersion>1.0.0</lastReleaseVersion>
+
+        <asm-all.version>5.0.3</asm-all.version>
+        <org.apache.aries.application.api.version>1.0.0</org.apache.aries.application.api.version>
+        <org.apache.aries.application.utils.version>1.0.0</org.apache.aries.application.utils.version>
+        <org.apache.aries.testsupport.unit.version>1.0.0</org.apache.aries.testsupport.unit.version>
+        <org.apache.aries.web.urlhandler.version>1.0.0</org.apache.aries.web.urlhandler.version>
     </properties>
 
     <dependencies>
@@ -59,12 +65,12 @@
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.api</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.api.version}</version>
         </dependency>
         <dependency>
-        	<groupId>org.apache.aries.application</groupId>
-        	<artifactId>org.apache.aries.application.utils</artifactId>
-            <version>1.0.0</version>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.utils</artifactId>
+            <version>${org.apache.aries.application.utils.version}</version>
         </dependency>
 
         <!-- Dependency on other Aries module bundles -->
@@ -72,13 +78,13 @@
             <groupId>org.apache.aries.testsupport</groupId>
             <artifactId>org.apache.aries.testsupport.unit</artifactId>
             <scope>test</scope>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.testsupport.unit.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.web</groupId>
             <artifactId>org.apache.aries.web.urlhandler</artifactId>
             <scope>provided</scope>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.web.urlhandler.version}</version>
         </dependency>
         <!--External dependencies. Versions may be specified in parent -->
         <dependency>
@@ -95,7 +101,7 @@
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm-all</artifactId>
             <scope>provided</scope>
-            <version>5.0.3</version>
+            <version>${asm-all.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>

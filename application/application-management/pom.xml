@@ -34,7 +34,7 @@
     <name>Apache Aries Application Management</name>
     <version>1.0.1-SNAPSHOT</version>
     <description>
-      Implementation of the application management API
+        Implementation of the application management API
     </description>
 
     <scm>
@@ -47,17 +47,21 @@
         <aries.osgi.export.pkg>
         </aries.osgi.export.pkg>
         <aries.osgi.import.pkg>
-           org.apache.aries.application.management;provide:=true,
-           org.apache.aries.application.management.spi.repository;provide:=true,
-           org.apache.aries.application.management.spi.resolve;provide:=true,
-           *
+            org.apache.aries.application.management;provide:=true,
+            org.apache.aries.application.management.spi.repository;provide:=true,
+            org.apache.aries.application.management.spi.resolve;provide:=true,
+            *
         </aries.osgi.import.pkg>
         <aries.osgi.private.pkg>
             org.apache.aries.application.management.impl;
-			org.apache.aries.application.management.internal;
-			org.apache.aries.application.management.repository
+            org.apache.aries.application.management.internal;
+            org.apache.aries.application.management.repository
         </aries.osgi.private.pkg>
         <lastReleaseVersion>1.0.0</lastReleaseVersion>
+
+        <org.apache.aries.application.deployment.management.version>1.0.0</org.apache.aries.application.deployment.management.version>
+        <org.apache.aries.application.utils.version>1.0.0</org.apache.aries.application.utils.version>
+        <org.apache.aries.testsupport.unit.version>1.0.0</org.apache.aries.testsupport.unit.version>
     </properties>
 
     <dependencies>
@@ -69,18 +73,18 @@
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.utils</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.utils.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.deployment.management</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.deployment.management.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.testsupport</groupId>
             <artifactId>org.apache.aries.testsupport.unit</artifactId>
             <scope>test</scope>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.testsupport.unit.version}</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>

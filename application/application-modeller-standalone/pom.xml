@@ -34,7 +34,7 @@
     <name>Apache Aries Application Modelling Standalone</name>
     <version>1.0.1-SNAPSHOT</version>
     <description>
-      Modelling utilities for working with Aries Applications (distribution for offline use).
+        Modelling utilities for working with Aries Applications (distribution for offline use).
     </description>
 
     <scm>
@@ -43,70 +43,80 @@
         <url>https://gitbox.apache.org/repos/asf?p=aries.git;a=summary</url>
     </scm>
 
+    <properties>
+        <blueprint-parser.version>1.0.0</blueprint-parser.version>
+        <org.apache.aries.application.api.version>1.0.0</org.apache.aries.application.api.version>
+        <org.apache.aries.application.modeller.version>1.0.0</org.apache.aries.application.modeller.version>
+        <org.apache.aries.application.utils.version>1.0.0</org.apache.aries.application.utils.version>
+        <org.apache.aries.blueprint.api.version>1.0.0</org.apache.aries.blueprint.api.version>
+        <org.apache.aries.ejb.modeller.version>1.0.0</org.apache.aries.ejb.modeller.version>
+        <org.apache.aries.util.version>1.0.0</org.apache.aries.util.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.aries</groupId>
             <artifactId>org.apache.aries.util</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.util.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.api</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.modeller</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.modeller.version}</version>
             <exclusions>
-              <exclusion>
-                <groupId>org.apache.aries.blueprint</groupId>
-                <artifactId>org.apache.aries.blueprint.core</artifactId>
-              </exclusion>
+                <exclusion>
+                    <groupId>org.apache.aries.blueprint</groupId>
+                    <artifactId>org.apache.aries.blueprint.core</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
-          <groupId>org.apache.aries.application</groupId>
-          <artifactId>org.apache.aries.application.utils</artifactId>
-          <version>1.0.0</version>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.utils</artifactId>
+            <version>${org.apache.aries.application.utils.version}</version>
         </dependency>
         <dependency>
-        	<groupId>org.apache.aries.blueprint</groupId>
-        	<artifactId>org.apache.aries.blueprint.api</artifactId>
-          <version>1.0.0</version>
+            <groupId>org.apache.aries.blueprint</groupId>
+            <artifactId>org.apache.aries.blueprint.api</artifactId>
+            <version>${org.apache.aries.blueprint.api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
             <artifactId>blueprint-parser</artifactId>
-            <version>1.0.0</version>
+            <version>${blueprint-parser.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.ejb</groupId>
             <artifactId>org.apache.aries.ejb.modeller</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.ejb.modeller.version}</version>
         </dependency>
     </dependencies>
 
     <build>
-      <plugins>
-        <plugin>
-          <artifactId>maven-assembly-plugin</artifactId>
-          <configuration>
-            <descriptorRefs>
-              <descriptorRef>jar-with-dependencies</descriptorRef>
-            </descriptorRefs>
-          </configuration>
-          <executions>
-            <execution>
-              <id>jar-with-dependencies</id>
-              <phase>package</phase>
-              <goals>
-                <goal>single</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>      
-      </plugins>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>jar-with-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 
 </project>

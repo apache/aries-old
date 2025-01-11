@@ -34,7 +34,7 @@
     <name>Apache Aries Application itests sample application interface</name>
     <version>1.0.1-SNAPSHOT</version>
     <description>
-      Interface class(es) for aplication runtime itests.
+        Interface class(es) for aplication runtime itests.
     </description>
 
     <scm>
@@ -43,12 +43,12 @@
         <url>https://gitbox.apache.org/repos/asf?p=aries.git;a=summary</url>
     </scm>
 
-	<properties>
+    <properties>
         <!-- Export package versions are maintained in packageinfo files -->
-		<aries.osgi.export.pkg>
-			org.apache.aries.sample
-		</aries.osgi.export.pkg>
-		<aries.osgi.private.pkg />
-	</properties>
+        <aries.osgi.export.pkg>
+            org.apache.aries.sample
+        </aries.osgi.export.pkg>
+        <aries.osgi.private.pkg/>
+    </properties>
 
 </project>

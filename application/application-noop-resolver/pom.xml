@@ -34,7 +34,7 @@
     <name>Apache Aries Application No-op Resolver</name>
     <version>1.0.1-SNAPSHOT</version>
     <description>
-      Dummy implementation of the AriesApplicationResolver
+        Dummy implementation of the AriesApplicationResolver
     </description>
 
     <scm>
@@ -47,13 +47,15 @@
         <aries.osgi.export.pkg>
         </aries.osgi.export.pkg>
         <aries.osgi.import.pkg>
-           org.apache.aries.application.management.spi.resolve;provide:=true,
-           *
+            org.apache.aries.application.management.spi.resolve;provide:=true,
+            *
         </aries.osgi.import.pkg>
         <aries.osgi.private.pkg>
             org.apache.aries.application.resolver.noop.impl
         </aries.osgi.private.pkg>
         <lastReleaseVersion>1.0.0</lastReleaseVersion>
+
+        <org.apache.aries.application.api.version>1.0.0</org.apache.aries.application.api.version>
     </properties>
 
     <dependencies>
@@ -65,7 +67,7 @@
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.api</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.api.version}</version>
         </dependency>
     </dependencies>
 
