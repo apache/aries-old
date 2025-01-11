@@ -41,34 +41,43 @@
     </scm>
 
     <properties>
-		<aries.osgi.export />
-		<aries.osgi.import>
-		    org.apache.aries.jpa.container.context;resolution:=optional,
+        <aries.osgi.export/>
+        <aries.osgi.import>
+            org.apache.aries.jpa.container.context;resolution:=optional,
             org.apache.aries.proxy;provide:=true,
             org.apache.openejb.config;provide:=true,
             org.apache.openejb.persistence;provide:=true,
             org.apache.openejb.util.proxy;provide:=true,
-		    *
-		</aries.osgi.import>
+            *
+        </aries.osgi.import>
         <aries.osgi.private.pkg>
             org.apache.aries.ejb.*
         </aries.osgi.private.pkg>
-		<aries.osgi.activator>
+        <aries.osgi.activator>
             org.apache.aries.ejb.openejb.extender.EJBExtender
         </aries.osgi.activator>
         <lastReleaseVersion>1.0.0</lastReleaseVersion>
+
+        <geronimo-ejb_3.1_spec.version>1.0.2</geronimo-ejb_3.1_spec.version>
+        <geronimo-jpa_2.0_spec.version>1.1</geronimo-jpa_2.0_spec.version>
+        <geronimo-jta_1.1_spec.version>1.1.1</geronimo-jta_1.1_spec.version>
+        <openejb-core.version>4.0.0-beta-1</openejb-core.version>
+        <org.apache.aries.jpa.api.version>1.0.0</org.apache.aries.jpa.api.version>
+        <org.apache.aries.proxy.api.version>1.0.0</org.apache.aries.proxy.api.version>
+        <org.apache.aries.testsupport.unit.version>1.0.0</org.apache.aries.testsupport.unit.version>
+        <org.apache.aries.util.version>1.0.0</org.apache.aries.util.version>
     </properties>
 
     <dependencies>
-    	<dependency>
-    		<groupId>org.apache.aries</groupId>
-    		<artifactId>org.apache.aries.util</artifactId>
-    		<version>1.0.0</version>
-    	</dependency>
-    	<dependency>
-    		<groupId>org.apache.openejb</groupId>
-    		<artifactId>openejb-core</artifactId>
-    		<version>4.0.0-beta-1</version>
+        <dependency>
+            <groupId>org.apache.aries</groupId>
+            <artifactId>org.apache.aries.util</artifactId>
+            <version>${org.apache.aries.util.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.openejb</groupId>
+            <artifactId>openejb-core</artifactId>
+            <version>${openejb-core.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.openejb</groupId>
@@ -79,16 +88,16 @@
                     <artifactId>slf4j-log4j12</artifactId>
                 </exclusion>
             </exclusions>
-    	</dependency>
-    	<dependency>
-    		<groupId>org.osgi</groupId>
-    		<artifactId>org.osgi.core</artifactId>
-    		<scope>provided</scope>
-    	</dependency>
+        </dependency>
         <dependency>
-        	<groupId>org.osgi</groupId>
-        	<artifactId>org.osgi.compendium</artifactId>
-        	<scope>provided</scope>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -101,53 +110,53 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-        	<groupId>org.apache.aries.testsupport</groupId>
-        	<artifactId>org.apache.aries.testsupport.unit</artifactId>
-        	<version>1.0.0</version>
-        	<scope>test</scope>
+            <groupId>org.apache.aries.testsupport</groupId>
+            <artifactId>org.apache.aries.testsupport.unit</artifactId>
+            <version>${org.apache.aries.testsupport.unit.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
-        	<groupId>org.apache.geronimo.specs</groupId>
-        	<artifactId>geronimo-jpa_2.0_spec</artifactId>
-        	<version>1.1</version>
-        	<scope>provided</scope>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jpa_2.0_spec</artifactId>
+            <version>${geronimo-jpa_2.0_spec.version}</version>
+            <scope>provided</scope>
         </dependency>
         <!--<dependency>-->
-        	<!--<groupId>org.apache.geronimo.specs</groupId>-->
-        	<!--<artifactId>geronimo-annotation_1.1_spec</artifactId>-->
-        	<!--<version>1.0.1</version>-->
-        	<!--<scope>test</scope>-->
+        <!--<groupId>org.apache.geronimo.specs</groupId>-->
+        <!--<artifactId>geronimo-annotation_1.1_spec</artifactId>-->
+        <!--<version>1.0.1</version>-->
+        <!--<scope>test</scope>-->
         <!--</dependency>-->
         <!--<dependency>-->
-        	<!--<groupId>org.apache.geronimo.specs</groupId>-->
-        	<!--<artifactId>geronimo-validation_1.0_spec</artifactId>-->
-        	<!--<version>1.1</version>-->
-        	<!--<scope>test</scope>-->
+        <!--<groupId>org.apache.geronimo.specs</groupId>-->
+        <!--<artifactId>geronimo-validation_1.0_spec</artifactId>-->
+        <!--<version>1.1</version>-->
+        <!--<scope>test</scope>-->
         <!--</dependency>-->
         <dependency>
-        	<groupId>org.apache.geronimo.specs</groupId>
-        	<artifactId>geronimo-jta_1.1_spec</artifactId>
-        	<version>1.1.1</version>
-        	<scope>provided</scope>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jta_1.1_spec</artifactId>
+            <version>${geronimo-jta_1.1_spec.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
-        	<groupId>org.apache.geronimo.specs</groupId>
-        	<artifactId>geronimo-ejb_3.1_spec</artifactId>
-        	<version>1.0.2</version>
-        	<scope>provided</scope>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-ejb_3.1_spec</artifactId>
+            <version>${geronimo-ejb_3.1_spec.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
-        	<groupId>org.apache.aries.proxy</groupId>
-        	<artifactId>org.apache.aries.proxy.api</artifactId>
-        	<version>1.0.0</version>
+            <groupId>org.apache.aries.proxy</groupId>
+            <artifactId>org.apache.aries.proxy.api</artifactId>
+            <version>${org.apache.aries.proxy.api.version}</version>
         </dependency>
         <dependency>
-        	<groupId>org.apache.aries.jpa</groupId>
-        	<artifactId>org.apache.aries.jpa.api</artifactId>
-        	<version>1.0.0</version>
+            <groupId>org.apache.aries.jpa</groupId>
+            <artifactId>org.apache.aries.jpa.api</artifactId>
+            <version>${org.apache.aries.jpa.api.version}</version>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>

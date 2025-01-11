@@ -41,37 +41,44 @@
     </scm>
 
     <properties>
-		<aries.osgi.export>
-		  org.apache.aries.ejb.modelling
-		</aries.osgi.export>
+        <aries.osgi.export>
+            org.apache.aries.ejb.modelling
+        </aries.osgi.export>
         <aries.osgi.private.pkg>
-          org.apache.aries.ejb.modelling.*
+            org.apache.aries.ejb.modelling.*
         </aries.osgi.private.pkg>
-        <aries.osgi.import.pkg> 
-          org.apache.openejb.*;resolution:=optional,
-          org.apache.xbean.*;resolution:=optional,
-          org.apache.aries.application.modelling;provide:=true,
-          org.apache.aries.util.filesystem;provide:=true,
-          *
+        <aries.osgi.import.pkg>
+            org.apache.openejb.*;resolution:=optional,
+            org.apache.xbean.*;resolution:=optional,
+            org.apache.aries.application.modelling;provide:=true,
+            org.apache.aries.util.filesystem;provide:=true,
+            *
         </aries.osgi.import.pkg>
         <lastReleaseVersion>1.0.0</lastReleaseVersion>
+
+        <javaee-api.version>6.0-1</javaee-api.version>
+        <openejb-core.version>4.0.0-beta-1</openejb-core.version>
+        <org.apache.aries.application.api.version>1.0.0</org.apache.aries.application.api.version>
+        <org.apache.aries.application.utils.version>1.0.0</org.apache.aries.application.utils.version>
+        <org.apache.aries.testsupport.unit.version>1.0.0</org.apache.aries.testsupport.unit.version>
+        <org.apache.aries.util.version>1.0.0</org.apache.aries.util.version>
     </properties>
 
     <dependencies>
-    	<dependency>
-    		<groupId>org.apache.aries.application</groupId>
-    		<artifactId>org.apache.aries.application.api</artifactId>
-    		<version>1.0.0</version>
-    	</dependency>
-    	<dependency>
-    		<groupId>org.apache.aries</groupId>
-    		<artifactId>org.apache.aries.util</artifactId>
-    		<version>1.0.0</version>
-    	</dependency>
-    	<dependency>
-    		<groupId>org.apache.openejb</groupId>
-    		<artifactId>openejb-core</artifactId>
-    		<version>4.0.0-beta-1</version>
+        <dependency>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.api</artifactId>
+            <version>${org.apache.aries.application.api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.aries</groupId>
+            <artifactId>org.apache.aries.util</artifactId>
+            <version>${org.apache.aries.util.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.openejb</groupId>
+            <artifactId>openejb-core</artifactId>
+            <version>${openejb-core.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.openejb</groupId>
@@ -82,18 +89,18 @@
                     <artifactId>slf4j-log4j12</artifactId>
                 </exclusion>
             </exclusions>
-    	</dependency>
-    	<dependency>
-    		<groupId>org.osgi</groupId>
-    		<artifactId>org.osgi.core</artifactId>
-    		<scope>provided</scope>
-    	</dependency>
-    	<dependency>
-    		<groupId>org.apache.aries.application</groupId>
-    		<artifactId>org.apache.aries.application.utils</artifactId>
-    		<version>1.0.0</version>
-    	</dependency>
-         <dependency>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.utils</artifactId>
+            <version>${org.apache.aries.application.utils.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <scope>provided</scope>
@@ -104,19 +111,19 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-        	<groupId>org.apache.aries.testsupport</groupId>
-        	<artifactId>org.apache.aries.testsupport.unit</artifactId>
-        	<version>1.0.0</version>
-        	<scope>test</scope>
+            <groupId>org.apache.aries.testsupport</groupId>
+            <artifactId>org.apache.aries.testsupport.unit</artifactId>
+            <version>${org.apache.aries.testsupport.unit.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.openejb</groupId>
             <artifactId>javaee-api</artifactId>
-            <version>6.0-1</version>
+            <version>${javaee-api.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>
