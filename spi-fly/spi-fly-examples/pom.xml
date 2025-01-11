@@ -41,14 +41,15 @@
         <maven.deploy.skip>true</maven.deploy.skip>
         <maven.install.skip>true</maven.install.skip>
         <obrRepository>none</obrRepository>
+        <maven-bundle-plugin.version>5.1.8</maven-bundle-plugin.version>
     </properties>
 
     <scm>
         <connection>scm:git:https://gitbox.apache.org/repos/asf/aries.git</connection>
         <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/aries.git</developerConnection>
         <url>https://gitbox.apache.org/repos/asf?p=aries.git;a=summary</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <modules>
         <module>spi-fly-example-spi-bundle</module>
@@ -67,7 +68,7 @@
         <module>spi-fly-example-resource-client-bundle</module>
     </modules>
 
-    <dependencyManagement>
+        <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.osgi</groupId>
@@ -83,7 +84,7 @@
                 <plugin>
                     <groupId>org.apache.felix</groupId>
                     <artifactId>maven-bundle-plugin</artifactId>
-                    <version>5.1.8</version>
+                    <version>${maven-bundle-plugin.version}</version>
                     <extensions>true</extensions>
                 </plugin>
             </plugins>
