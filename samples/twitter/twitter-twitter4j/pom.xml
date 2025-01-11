@@ -27,29 +27,34 @@
     <packaging>bundle</packaging>
     <name>Apache Aries Bundlise Twitter4j</name>
     <description>
-      Module used to bundlelise twitter4j 
+        Module used to bundlelise twitter4j
     </description>
+
+    <properties>
+        <maven-bundle-plugin.version>2.3.5</maven-bundle-plugin.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>net.homeip.yusuke</groupId>
             <artifactId>twitter4j</artifactId>
         </dependency>
-	</dependencies>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<version>2.3.5</version>
-				<extensions>true</extensions>
-				<configuration>
-					<instructions>
-						<Import-Package>dalvik.system;resolution:=optional,*</Import-Package>
-						<Export-Package>!twitter4j.examples,*</Export-Package>
-					</instructions>
-				</configuration>
-			</plugin>
-		</plugins>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>${maven-bundle-plugin.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Import-Package>dalvik.system;resolution:=optional,*</Import-Package>
+                        <Export-Package>!twitter4j.examples,*</Export-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
 </project>

@@ -16,7 +16,7 @@
     limitations under the License.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    
+
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.apache.aries.samples</groupId>
@@ -28,11 +28,11 @@
     <name>Apache Aries Twitter sample</name>
     <artifactId>twitter</artifactId>
     <packaging>pom</packaging>
-    
+
     <properties>
-    	<aries.skip.version.check>true</aries.skip.version.check>
+        <aries.skip.version.check>true</aries.skip.version.check>
     </properties>
-    
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -57,9 +57,9 @@
 
     <modules>
         <module>twitter-twitter4j</module>
-    	<module>twitter-bundle</module>
-    	<module>twitter-eba</module>
-    	<module>twitter-itests</module>
+        <module>twitter-bundle</module>
+        <module>twitter-eba</module>
+        <module>twitter-itests</module>
     </modules>
 
 </project>

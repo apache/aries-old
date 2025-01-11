@@ -18,16 +18,20 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.apache.aries.samples.blueprint.idverifier</groupId>
-    	<artifactId>idverifier</artifactId>
-    	<version>1.0.1-SNAPSHOT</version>
+        <artifactId>idverifier</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>org.apache.aries.samples.blueprint.idverifier.server</artifactId>
     <name>Apache Aries Blueprint Sample - ID Verifier Server</name>
     <packaging>bundle</packaging>
     <description>
-         Example blueprint application to demo inlined managers definitions.
+        Example blueprint application to demo inlined managers definitions.
     </description>
+
+    <properties>
+        <osgi.version>3.5.0.v20090520</osgi.version>
+    </properties>
 
     <build>
         <plugins>
@@ -36,10 +40,10 @@
                 <artifactId>maven-bundle-plugin</artifactId>
                 <configuration>
                     <instructions>
-                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>                        
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Import-Package>
-                          org.apache.aries.samples.blueprint.idverifier.api;provide:=true,
-                          *
+                            org.apache.aries.samples.blueprint.idverifier.api;provide:=true,
+                            *
                         </Import-Package>
 
                     </instructions>
@@ -51,14 +55,14 @@
         <dependency>
             <groupId>org.eclipse</groupId>
             <artifactId>osgi</artifactId>
-            <version>3.5.0.v20090520</version>
+            <version>${osgi.version}</version>
             <scope>provided</scope>
         </dependency>
-       <dependency>
-           <groupId>org.apache.aries.blueprint</groupId>
-           <artifactId>org.apache.aries.blueprint.api</artifactId>
-       </dependency>
-       <dependency>
+        <dependency>
+            <groupId>org.apache.aries.blueprint</groupId>
+            <artifactId>org.apache.aries.blueprint.api</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.apache.aries.samples.blueprint.idverifier</groupId>
             <artifactId>org.apache.aries.samples.blueprint.idverifier.api</artifactId>
             <version>${project.version}</version>

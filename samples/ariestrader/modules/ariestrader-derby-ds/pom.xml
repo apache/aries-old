@@ -23,7 +23,7 @@
         <artifactId>modules</artifactId>
         <version>1.0.1-SNAPSHOT</version>
     </parent>
-     
+
     <groupId>org.apache.aries.samples.ariestrader</groupId>
     <artifactId>org.apache.aries.samples.ariestrader.derby.ds</artifactId>
     <packaging>bundle</packaging>
@@ -31,8 +31,8 @@
     <description>AriesTrader Derby DataSource</description>
 
     <properties>
-         <aries.osgi.export.pkg />
-         <aries.osgi.private.pkg />
+        <aries.osgi.export.pkg/>
+        <aries.osgi.private.pkg/>
     </properties>
     <dependencies>
         <dependency>

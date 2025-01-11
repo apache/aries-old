@@ -19,137 +19,137 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.apache.aries.samples.blueprint.idverifier</groupId>
-		<artifactId>idverifier</artifactId>
-		<version>1.0.1-SNAPSHOT</version>
-	</parent>
+    <parent>
+        <groupId>org.apache.aries.samples.blueprint.idverifier</groupId>
+        <artifactId>idverifier</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+    </parent>
 
-	<artifactId>org.apache.aries.samples.blueprint.idverifier.assembly</artifactId>
-	<name>Apache Aries Blueprint Sample - ID Verifier Assembly</name>
-	<packaging>pom</packaging>
+    <artifactId>org.apache.aries.samples.blueprint.idverifier.assembly</artifactId>
+    <name>Apache Aries Blueprint Sample - ID Verifier Assembly</name>
+    <packaging>pom</packaging>
 
-	<dependencies>	
+    <dependencies>
 
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.apache.felix.main</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.main</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.apache.felix.shell</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.shell</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.apache.felix.shell.tui</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.shell.tui</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.apache.felix.configadmin</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.configadmin</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.apache.felix.eventadmin</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.eventadmin</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.ops4j.pax.logging</groupId>
-			<artifactId>pax-logging-api</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.logging</groupId>
+            <artifactId>pax-logging-api</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.ops4j.pax.logging</groupId>
-			<artifactId>pax-logging-service</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.logging</groupId>
+            <artifactId>pax-logging-service</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.aries.proxy</groupId>
-			<artifactId>org.apache.aries.proxy</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.aries.proxy</groupId>
+            <artifactId>org.apache.aries.proxy</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.aries.blueprint</groupId>
-			<artifactId>org.apache.aries.blueprint</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.aries.blueprint</groupId>
+            <artifactId>org.apache.aries.blueprint</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.aries</groupId>
-			<artifactId>org.apache.aries.util</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.aries.jmx</groupId>
-			<artifactId>org.apache.aries.jmx.blueprint</artifactId>
-		</dependency>
-		<dependency>
-             <groupId>asm</groupId>
-             <artifactId>asm-all</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.aries</groupId>
+            <artifactId>org.apache.aries.util</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.aries.jmx</groupId>
+            <artifactId>org.apache.aries.jmx.blueprint</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>asm</groupId>
+            <artifactId>asm-all</artifactId>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.aries.samples.blueprint.idverifier</groupId>
-			<artifactId>org.apache.aries.samples.blueprint.idverifier.api</artifactId>
+        <dependency>
+            <groupId>org.apache.aries.samples.blueprint.idverifier</groupId>
+            <artifactId>org.apache.aries.samples.blueprint.idverifier.api</artifactId>
             <version>${project.version}</version>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.aries.samples.blueprint.idverifier</groupId>
-			<artifactId>org.apache.aries.samples.blueprint.idverifier.server</artifactId>
+        <dependency>
+            <groupId>org.apache.aries.samples.blueprint.idverifier</groupId>
+            <artifactId>org.apache.aries.samples.blueprint.idverifier.server</artifactId>
             <version>${project.version}</version>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.aries.samples.blueprint.idverifier</groupId>
-			<artifactId>org.apache.aries.samples.blueprint.idverifier.client</artifactId>
+        <dependency>
+            <groupId>org.apache.aries.samples.blueprint.idverifier</groupId>
+            <artifactId>org.apache.aries.samples.blueprint.idverifier.client</artifactId>
             <version>${project.version}</version>
-		</dependency>
+        </dependency>
 
 
-	</dependencies>
+    </dependencies>
 
-	<build>
+    <build>
 
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<configuration>
-					<outputDirectory>${project.build.directory}</outputDirectory>
-				</configuration>
-				<executions>
-					<execution>
-						<id>filter</id>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>resources</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <outputDirectory>${project.build.directory}</outputDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>filter</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>resources</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>copy</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-						<configuration>
-							<excludeTransitive>true</excludeTransitive>
-							<outputDirectory>${project.build.directory}/bundles</outputDirectory>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <excludeTransitive>true</excludeTransitive>
+                            <outputDirectory>${project.build.directory}/bundles</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

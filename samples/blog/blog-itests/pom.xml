@@ -29,18 +29,30 @@
     <description>
         Integration test for the blog sample
     </description>
-    
+
     <properties>
+        <asm.version>4.0</asm.version>
+        <cm.version>3.2.0-v20070116</cm.version>
+        <depends-maven-plugin.version>1.2</depends-maven-plugin.version>
         <exam.version>3.4.0</exam.version>
-        <url.version>1.6.0</url.version>
+        <logback.version>0.9.29</logback.version>
+        <org.apache.aries.testsupport.unit.version>2.0.0-SNAPSHOT</org.apache.aries.testsupport.unit.version>
+        <org.eclipse.osgi.version>3.8.0.v20120529-1548</org.eclipse.osgi.version>
+        <pax-web-extender-war.version>3.0.0</pax-web-extender-war.version>
+        <pax-web-jetty-bundle.version>3.1.0</pax-web-jetty-bundle.version>
+        <services.version>3.1.200-v20070605</services.version>
+        <slf4j-api.version>1.7.7</slf4j-api.version>
         <swissbox.version>1.7.0</swissbox.version>
+        <tinybundles.version>2.0.0</tinybundles.version>
+        <url.version>1.6.0</url.version>
+        <xbean.version>3.16</xbean.version>
     </properties>
 
     <dependencies>
-   		<dependency>
+        <dependency>
             <groupId>org.eclipse</groupId>
             <artifactId>org.eclipse.osgi</artifactId>
-            <version>3.8.0.v20120529-1548</version>
+            <version>${org.eclipse.osgi.version}</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
@@ -69,7 +81,7 @@
         <dependency>
             <groupId>org.apache.aries.testsupport</groupId>
             <artifactId>org.apache.aries.testsupport.unit</artifactId>
-            <version>2.0.0-SNAPSHOT</version>
+            <version>${org.apache.aries.testsupport.unit.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -96,13 +108,13 @@
             <artifactId>org.apache.aries.samples.blog.persistence.jpa</artifactId>
             <scope>test</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.apache.aries.samples.blog</groupId>
             <artifactId>org.apache.aries.samples.blog.persistence.jdbc</artifactId>
             <scope>test</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.apache.aries.samples.blog</groupId>
             <artifactId>org.apache.aries.samples.blog.datasource</artifactId>
@@ -132,103 +144,103 @@
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm-all</artifactId>
-            <version>4.0</version>
+            <version>${asm.version}</version>
             <scope>test</scope>
         </dependency>
 
-		<dependency>
-			<groupId>org.eclipse.equinox</groupId>
-			<artifactId>cm</artifactId>
-            <version>3.2.0-v20070116</version>
+        <dependency>
+            <groupId>org.eclipse.equinox</groupId>
+            <artifactId>cm</artifactId>
+            <version>${cm.version}</version>
             <scope>test</scope>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.eclipse.osgi</groupId>
-			<artifactId>services</artifactId>
-            <version>3.1.200-v20070605</version>
+        <dependency>
+            <groupId>org.eclipse.osgi</groupId>
+            <artifactId>services</artifactId>
+            <version>${services.version}</version>
             <scope>test</scope>
-		</dependency>
-		
-	    <dependency>
-        	<groupId>org.apache.xbean</groupId>
-        	<artifactId>xbean-asm4-shaded</artifactId>
-        	<version>3.16</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.xbean</groupId>
+            <artifactId>xbean-asm4-shaded</artifactId>
+            <version>${xbean.version}</version>
         </dependency>
         <dependency>
-        	<groupId>org.apache.xbean</groupId>
-        	<artifactId>xbean-finder-shaded</artifactId>
-        	<version>3.16</version>
+            <groupId>org.apache.xbean</groupId>
+            <artifactId>xbean-finder-shaded</artifactId>
+            <version>${xbean.version}</version>
         </dependency>
-	   	<dependency>
-			<groupId>org.ops4j.pax.web</groupId>
-			<artifactId>pax-web-extender-war</artifactId>
-			<version>3.0.0</version>
+        <dependency>
+            <groupId>org.ops4j.pax.web</groupId>
+            <artifactId>pax-web-extender-war</artifactId>
+            <version>${pax-web-extender-war.version}</version>
             <scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.ops4j.pax.web</groupId>
-			<artifactId>pax-web-jetty-bundle</artifactId>
-			<version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.web</groupId>
+            <artifactId>pax-web-jetty-bundle</artifactId>
+            <version>${pax-web-jetty-bundle.version}</version>
             <scope>test</scope>
-		</dependency>
-		
+        </dependency>
 
-<!-- 
-		<dependency>
-			<groupId>org.ops4j.pax.web</groupId>
-			<artifactId>pax-web-jsp</artifactId>
-            <scope>test</scope>
-		</dependency>
- -->
-		<dependency>
-			<groupId>org.apache.derby</groupId>
-			<artifactId>derby</artifactId>
-            <scope>test</scope>
-		</dependency>
 
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.apache.felix.fileinstall</artifactId>
+        <!--
+                <dependency>
+                    <groupId>org.ops4j.pax.web</groupId>
+                    <artifactId>pax-web-jsp</artifactId>
+                    <scope>test</scope>
+                </dependency>
+         -->
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
             <scope>test</scope>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-jpa_2.0_spec</artifactId>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.fileinstall</artifactId>
             <scope>test</scope>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-jta_1.1_spec</artifactId>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jpa_2.0_spec</artifactId>
             <scope>test</scope>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.geronimo.specs</groupId>
-			<artifactId>geronimo-j2ee-connector_1.5_spec</artifactId>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jta_1.1_spec</artifactId>
             <scope>test</scope>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.geronimo.components</groupId>
-			<artifactId>geronimo-transaction</artifactId>
+        <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-j2ee-connector_1.5_spec</artifactId>
             <scope>test</scope>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.openjpa</groupId>
-			<artifactId>openjpa</artifactId>
+        <dependency>
+            <groupId>org.apache.geronimo.components</groupId>
+            <artifactId>geronimo-transaction</artifactId>
             <scope>test</scope>
-		</dependency>
-		
-		 <dependency>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.openjpa</groupId>
+            <artifactId>openjpa</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
             <scope>test</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
@@ -240,136 +252,136 @@
             <artifactId>commons-pool</artifactId>
             <scope>test</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.serp</artifactId>
             <scope>test</scope>
         </dependency>
-		
-		<dependency>
-			<groupId>org.apache.aries.jndi</groupId>
-			<artifactId>org.apache.aries.jndi</artifactId>
-            <scope>test</scope>
-		</dependency>
 
-		<dependency>
-			<groupId>org.apache.aries.application</groupId>
-			<artifactId>org.apache.aries.application.install</artifactId>
+        <dependency>
+            <groupId>org.apache.aries.jndi</groupId>
+            <artifactId>org.apache.aries.jndi</artifactId>
             <scope>test</scope>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.aries.application</groupId>
-			<artifactId>org.apache.aries.application.api</artifactId>
+        <dependency>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.install</artifactId>
             <scope>test</scope>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.aries.application</groupId>
-			<artifactId>org.apache.aries.application.deployment.management</artifactId>
+        <dependency>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.api</artifactId>
             <scope>test</scope>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.aries.application</groupId>
-			<artifactId>org.apache.aries.application.management</artifactId>
+        <dependency>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.deployment.management</artifactId>
             <scope>test</scope>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.aries.application</groupId>
-			<artifactId>org.apache.aries.application.modeller</artifactId>
+        <dependency>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.management</artifactId>
             <scope>test</scope>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.aries.application</groupId>
-			<artifactId>org.apache.aries.application.runtime</artifactId>
+        <dependency>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.modeller</artifactId>
             <scope>test</scope>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.aries.application</groupId>
-			<artifactId>org.apache.aries.application.utils</artifactId>
+        <dependency>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.runtime</artifactId>
             <scope>test</scope>
-		</dependency>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.utils</artifactId>
+            <scope>test</scope>
+        </dependency>
 
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.default.local.platform</artifactId>
             <scope>test</scope>
         </dependency>
-		<dependency>
+        <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.bundlerepository</artifactId>
             <scope>test</scope>
         </dependency>
-		<dependency>
-			<groupId>org.apache.aries.jpa</groupId>
-			<artifactId>org.apache.aries.jpa.api</artifactId>
+        <dependency>
+            <groupId>org.apache.aries.jpa</groupId>
+            <artifactId>org.apache.aries.jpa.api</artifactId>
             <scope>test</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.apache.aries.jpa</groupId>
-			<artifactId>org.apache.aries.jpa.container</artifactId>
-            <scope>test</scope>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.aries.jpa</groupId>
-			<artifactId>org.apache.aries.jpa.blueprint.aries</artifactId>
+        <dependency>
+            <groupId>org.apache.aries.jpa</groupId>
+            <artifactId>org.apache.aries.jpa.container</artifactId>
             <scope>test</scope>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.aries.jpa</groupId>
-			<artifactId>org.apache.aries.jpa.container.context</artifactId>
+        <dependency>
+            <groupId>org.apache.aries.jpa</groupId>
+            <artifactId>org.apache.aries.jpa.blueprint.aries</artifactId>
             <scope>test</scope>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.aries.transaction</groupId>
-			<artifactId>org.apache.aries.transaction.manager</artifactId>
+        <dependency>
+            <groupId>org.apache.aries.jpa</groupId>
+            <artifactId>org.apache.aries.jpa.container.context</artifactId>
             <scope>test</scope>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.aries.transaction</groupId>
-			<artifactId>org.apache.aries.transaction.blueprint</artifactId>
+        <dependency>
+            <groupId>org.apache.aries.transaction</groupId>
+            <artifactId>org.apache.aries.transaction.manager</artifactId>
             <scope>test</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.apache.aries.transaction</groupId>
-			<artifactId>org.apache.aries.transaction.wrappers</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.aries.transaction</groupId>
+            <artifactId>org.apache.aries.transaction.blueprint</artifactId>
             <scope>test</scope>
-		</dependency>
-		
-		<dependency>
-      		<groupId>org.apache.aries.quiesce</groupId>
-      		<artifactId>org.apache.aries.quiesce.api</artifactId>
-      		<scope>test</scope>
-		</dependency>
-		
-		<dependency>
-      		<groupId>org.apache.aries.quiesce</groupId>
-      		<artifactId>org.apache.aries.quiesce.manager</artifactId>
-      		<scope>test</scope>
-		</dependency>
-		
-		<dependency>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.aries.transaction</groupId>
+            <artifactId>org.apache.aries.transaction.wrappers</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.aries.quiesce</groupId>
+            <artifactId>org.apache.aries.quiesce.api</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.aries.quiesce</groupId>
+            <artifactId>org.apache.aries.quiesce.manager</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.resolver.obr</artifactId>
             <scope>test</scope>
         </dependency>
-        
+
         <!-- pax exam -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.7</version>
+            <version>${slf4j-api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.exam</groupId>
@@ -404,19 +416,19 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
-            <version>0.9.29</version>
+            <version>${logback.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>0.9.29</version>
+            <version>${logback.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.tinybundles</groupId>
             <artifactId>tinybundles</artifactId>
-            <version>2.0.0</version>
+            <version>${tinybundles.version}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>org.osgi.core</artifactId>
@@ -429,14 +441,14 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
-	</dependencies>
+    </dependencies>
 
     <build>
         <plugins>
-			<plugin>
+            <plugin>
                 <groupId>org.apache.servicemix.tooling</groupId>
                 <artifactId>depends-maven-plugin</artifactId>
-                <version>1.2</version>
+                <version>${depends-maven-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>generate-depends-file</id>
@@ -484,27 +496,27 @@
     </profiles>
 
     <dependencyManagement>
-    	<dependencies>
-    		<dependency>
-    			<groupId>org.ops4j.pax.swissbox</groupId>
-    			<artifactId>pax-swissbox-core</artifactId>
-    			<version>${swissbox.version}</version>
-    		</dependency>
-    		<dependency>
-    			<groupId>org.ops4j.pax.swissbox</groupId>
-    			<artifactId>pax-swissbox-tracker</artifactId>
-    			<version>${swissbox.version}</version>
-    		</dependency>
-    		<dependency>
-    			<groupId>org.ops4j.pax.swissbox</groupId>
-    			<artifactId>pax-swissbox-extender</artifactId>
-    			<version>${swissbox.version}</version>
-    		</dependency>
-    		<dependency>
-    			<groupId>org.ops4j.pax.swissbox</groupId>
-    			<artifactId>pax-swissbox-optional-jcl</artifactId>
-    			<version>${swissbox.version}</version>
-    		</dependency>
-    	</dependencies>
+        <dependencies>
+            <dependency>
+                <groupId>org.ops4j.pax.swissbox</groupId>
+                <artifactId>pax-swissbox-core</artifactId>
+                <version>${swissbox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ops4j.pax.swissbox</groupId>
+                <artifactId>pax-swissbox-tracker</artifactId>
+                <version>${swissbox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ops4j.pax.swissbox</groupId>
+                <artifactId>pax-swissbox-extender</artifactId>
+                <version>${swissbox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ops4j.pax.swissbox</groupId>
+                <artifactId>pax-swissbox-optional-jcl</artifactId>
+                <version>${swissbox.version}</version>
+            </dependency>
+        </dependencies>
     </dependencyManagement>
 </project>

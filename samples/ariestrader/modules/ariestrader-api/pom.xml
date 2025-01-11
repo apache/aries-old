@@ -24,14 +24,13 @@
         <version>1.0.1-SNAPSHOT</version>
     </parent>
 
-
     <properties>
-         <!-- Export versions handled in packageinfo. Override settings in default parent which cause build warnings -->
-         <aries.osgi.export>
+        <!-- Export versions handled in packageinfo. Override settings in default parent which cause build warnings -->
+        <aries.osgi.export>
             org.apache.aries.samples.ariestrader.api,
             org.apache.aries.samples.ariestrader.api.persistence
-         </aries.osgi.export>
-         <aries.osgi.private.pkg />
+        </aries.osgi.export>
+        <aries.osgi.private.pkg/>
     </properties>
 
     <groupId>org.apache.aries.samples.ariestrader</groupId>
