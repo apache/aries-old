@@ -39,28 +39,44 @@
         <url>https://gitbox.apache.org/repos/asf?p=aries.git;a=summary</url>
     </scm>
 
+    <properties>
+        <commons-collections.version>3.2.2</commons-collections.version>
+        <commons-lang.version>2.4</commons-lang.version>
+        <commons-pool.version>1.5.3</commons-pool.version>
+        <depends-maven-plugin.version>1.2</depends-maven-plugin.version>
+        <org.apache.aries.quiesce.api.version>1.0.0</org.apache.aries.quiesce.api.version>
+        <org.apache.aries.quiesce.manager.version>1.0.0</org.apache.aries.quiesce.manager.version>
+        <org.apache.aries.testsupport.unit.version>2.0.0-SNAPSHOT</org.apache.aries.testsupport.unit.version>
+        <org.apache.aries.util.version>1.0.0</org.apache.aries.util.version>
+        <org.apache.felix.configadmin.version>1.2.4</org.apache.felix.configadmin.version>
+        <org.apache.servicemix.bundles.serp.version>1.13.1_2</org.apache.servicemix.bundles.serp.version>
+        <org.eclipse.osgi.version>3.8.0.v20120529-1548</org.eclipse.osgi.version>
+        <pax-exam.version>3.4.0</pax-exam.version>
+        <pax-url-aether.version>2.5.3</pax-url-aether.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.eclipse</groupId>
             <artifactId>org.eclipse.osgi</artifactId>
-            <version>3.8.0.v20120529-1548</version>
+            <version>${org.eclipse.osgi.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.quiesce</groupId>
             <artifactId>org.apache.aries.quiesce.api</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.quiesce.api.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.quiesce</groupId>
             <artifactId>org.apache.aries.quiesce.manager</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.quiesce.manager.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.testsupport</groupId>
             <artifactId>org.apache.aries.testsupport.unit</artifactId>
-            <version>2.0.0-SNAPSHOT</version>
+            <version>${org.apache.aries.testsupport.unit.version}</version>
             <scope>test</scope>
         </dependency>
         <!--
@@ -93,43 +109,43 @@
         <dependency>
             <groupId>org.ops4j.pax.exam</groupId>
             <artifactId>pax-exam</artifactId>
-            <version>3.4.0</version>
+            <version>${pax-exam.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.exam</groupId>
             <artifactId>pax-exam-container-native</artifactId>
-            <version>3.4.0</version>
+            <version>${pax-exam.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.exam</groupId>
             <artifactId>pax-exam-junit4</artifactId>
-            <version>3.4.0</version>
+            <version>${pax-exam.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.exam</groupId>
             <artifactId>pax-exam-link-mvn</artifactId>
-            <version>3.4.0</version>
+            <version>${pax-exam.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.url</groupId>
             <artifactId>pax-url-aether</artifactId>
-            <version>2.5.3</version>
+            <version>${pax-url-aether.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.aries</groupId>
             <artifactId>org.apache.aries.util</artifactId>
             <scope>test</scope>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.util.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.configadmin</artifactId>
-            <version>1.2.4</version>
+            <version>${org.apache.felix.configadmin.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.felix</groupId>
@@ -144,24 +160,24 @@
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
-            <version>2.4</version>
+            <version>${commons-lang.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
             <scope>test</scope>
-            <version>3.2.2</version>
+            <version>${commons-collections.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-pool</groupId>
             <artifactId>commons-pool</artifactId>
             <scope>test</scope>
-            <version>1.5.3</version>
+            <version>${commons-pool.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.serp</artifactId>
-            <version>1.13.1_2</version>
+            <version>${org.apache.servicemix.bundles.serp.version}</version>
         </dependency>
     </dependencies>
 
@@ -170,7 +186,7 @@
             <plugin>
                 <groupId>org.apache.servicemix.tooling</groupId>
                 <artifactId>depends-maven-plugin</artifactId>
-                <version>1.2</version>
+                <version>${depends-maven-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>generate-depends-file</id>
