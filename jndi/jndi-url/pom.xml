@@ -34,7 +34,7 @@
     <name>Apache Aries JNDI URL Handler</name>
     <version>1.1.1-SNAPSHOT</version>
     <description>
-      This bundle contains the JNDI URL handler for OSGi
+        This bundle contains the JNDI URL handler for OSGi
     </description>
 
     <scm>
@@ -55,11 +55,11 @@
             org.apache.aries.jndi.url.Activator
         </aries.osgi.activator>
         <aries.osgi.import.pkg>
-          org.osgi.service.blueprint.container;resolution:=optional,
-          *
+            org.osgi.service.blueprint.container;resolution:=optional,
+            *
         </aries.osgi.import.pkg>
         <aries.osgi.import.service>
-          org.apache.aries.proxy.ProxyManager
+            org.apache.aries.proxy.ProxyManager
         </aries.osgi.import.service>
         <lastReleaseVersion>1.0.0</lastReleaseVersion>
 

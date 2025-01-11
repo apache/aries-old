@@ -41,17 +41,28 @@
         <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/aries.git</developerConnection>
         <url>https://gitbox.apache.org/repos/asf?p=aries.git;a=summary</url>
     </scm>
-     
-     <properties>
+
+    <properties>
+        <asm-debug-all.version>5.0.3</asm-debug-all.version>
+        <cm.version>3.2.0-v20070116</cm.version>
+        <geronimo-servlet_2.5_spec.version>1.2</geronimo-servlet_2.5_spec.version>
+        <jndi-api.version>${jndi-api.dev-version}</jndi-api.version>
+        <jndi-bundle.version>${jndi-bundle.dev-version}</jndi-bundle.version>
+        <jndi-url-itest-biz.version>${jndi-url-itest-biz.dev-version}</jndi-url-itest-biz.version>
+        <jndi-url-itest-web.version>${jndi-url-itest-web.dev-version}</jndi-url-itest-web.version>
+        <jndi-url.version>${jndi-url.dev-version}</jndi-url.version>
+        <logback.version>1.5.16</logback.version>
+        <org.apache.aries.testsupport.unit.version>2.0.0-SNAPSHOT</org.apache.aries.testsupport.unit.version>
+        <org.apache.felix.fileinstall.version>3.4.0</org.apache.felix.fileinstall.version>
+        <org.apache.servicemix.bundles.cglib.version>2.1_3_4</org.apache.servicemix.bundles.cglib.version>
+        <org.eclipse.osgi.version>3.11.3</org.eclipse.osgi.version>
         <pax-exam.version>4.11.0</pax-exam.version>
         <pax-url.version>2.6.0</pax-url.version>
-
-         <jndi-api.version>${jndi-api.dev-version}</jndi-api.version>
-         <jndi-bundle.version>${jndi-bundle.dev-version}</jndi-bundle.version>
-         <jndi-url.version>${jndi-url.dev-version}</jndi-url.version>
-         <jndi-url-itest-web.version>${jndi-url-itest-web.dev-version}</jndi-url-itest-web.version>
-         <jndi-url-itest-biz.version>${jndi-url-itest-biz.dev-version}</jndi-url-itest-biz.version>
-         <logback.version>1.5.16</logback.version>
+        <pax-web-extender-war.version>1.1.18</pax-web-extender-war.version>
+        <pax-web-jetty-bundle.version>1.1.18</pax-web-jetty-bundle.version>
+        <services.version>3.1.200-v20070605</services.version>
+        <slf4j-api.version>1.7.7</slf4j-api.version>
+        <tinybundles.version>2.0.0</tinybundles.version>
     </properties>
 
     <dependencies>
@@ -94,10 +105,10 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-          <groupId>org.apache.aries.testsupport</groupId>
-          <artifactId>org.apache.aries.testsupport.unit</artifactId>
-            <version>2.0.0-SNAPSHOT</version>
-          <scope>test</scope>
+            <groupId>org.apache.aries.testsupport</groupId>
+            <artifactId>org.apache.aries.testsupport.unit</artifactId>
+            <version>${org.apache.aries.testsupport.unit.version}</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -105,7 +116,7 @@
             <artifactId>org.apache.aries.blueprint.api</artifactId>
             <scope>test</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
             <artifactId>org.apache.aries.blueprint.core</artifactId>
@@ -127,11 +138,11 @@
             <artifactId>org.apache.aries.proxy.impl</artifactId>
         </dependency>
 
- 		<!-- pax exam -->
+        <!-- pax exam -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.7</version>
+            <version>${slf4j-api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.exam</groupId>
@@ -178,12 +189,12 @@
         <dependency>
             <groupId>org.ops4j.pax.tinybundles</groupId>
             <artifactId>tinybundles</artifactId>
-            <version>2.0.0</version>
+            <version>${tinybundles.version}</version>
             <exclusions>
-            	<exclusion>
+                <exclusion>
                     <groupId>org.osgi</groupId>
-            		<artifactId>org.osgi.core</artifactId>
-            	</exclusion>
+                    <artifactId>org.osgi.core</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
@@ -194,64 +205,64 @@
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.osgi</artifactId>
-            <version>3.11.3</version>
+            <version>${org.eclipse.osgi.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.cglib</artifactId>
             <scope>test</scope>
-            <version>2.1_3_4</version>
+            <version>${org.apache.servicemix.bundles.cglib.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm-debug-all</artifactId>
             <scope>test</scope>
-            <version>5.0.3</version>
+            <version>${asm-debug-all.version}</version>
         </dependency>
 
-		<dependency>
-			<groupId>org.eclipse.equinox</groupId>
-			<artifactId>cm</artifactId>
-            <version>3.2.0-v20070116</version>
+        <dependency>
+            <groupId>org.eclipse.equinox</groupId>
+            <artifactId>cm</artifactId>
+            <version>${cm.version}</version>
             <scope>test</scope>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>org.eclipse.osgi</groupId>
-			<artifactId>services</artifactId>
-            <version>3.1.200-v20070605</version>
+        <dependency>
+            <groupId>org.eclipse.osgi</groupId>
+            <artifactId>services</artifactId>
+            <version>${services.version}</version>
             <scope>test</scope>
-		</dependency>
+        </dependency>
 
         <dependency>
             <groupId>org.apache.geronimo.specs</groupId>
             <artifactId>geronimo-servlet_2.5_spec</artifactId>
             <scope>test</scope>
-            <version>1.2</version>
+            <version>${geronimo-servlet_2.5_spec.version}</version>
         </dependency>
-            
-		<dependency>
-			<groupId>org.ops4j.pax.web</groupId>
-			<artifactId>pax-web-extender-war</artifactId>
-            <scope>test</scope>
-            <version>1.1.18</version>
-		</dependency>
-		<dependency>
-			<groupId>org.ops4j.pax.web</groupId>
-			<artifactId>pax-web-jetty-bundle</artifactId>
-            <scope>test</scope>
-            <version>1.1.18</version>
-		</dependency>
 
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.apache.felix.fileinstall</artifactId>
+        <dependency>
+            <groupId>org.ops4j.pax.web</groupId>
+            <artifactId>pax-web-extender-war</artifactId>
             <scope>test</scope>
-            <version>3.4.0</version>
-		</dependency>
-        
+            <version>${pax-web-extender-war.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.web</groupId>
+            <artifactId>pax-web-jetty-bundle</artifactId>
+            <scope>test</scope>
+            <version>${pax-web-jetty-bundle.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.fileinstall</artifactId>
+            <scope>test</scope>
+            <version>${org.apache.felix.fileinstall.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.ops4j.pax.logging</groupId>
             <artifactId>pax-logging-api</artifactId>
@@ -264,7 +275,7 @@
         </dependency>
     </dependencies>
 
-     <build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -279,7 +290,7 @@
                 <version>1.2</version>
                 <executions>
                     <execution>
-                    	<phase>generate-resources</phase>
+                        <phase>generate-resources</phase>
                         <id>generate-depends-file</id>
                         <goals>
                             <goal>generate-depends-file</goal>
