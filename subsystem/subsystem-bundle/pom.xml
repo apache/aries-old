@@ -45,7 +45,7 @@
         <aries.osgi.activator>
             org.apache.aries.subsystem.core.internal.Activator
         </aries.osgi.activator>
-    	<aries.osgi.import>
+        <aries.osgi.import>
             org.osgi.service.repository;version="[1.0,1.1)",
             org.osgi.service.subsystem;version="[1.1,1.2)",
             org.apache.aries.application.*;resolution:=optional,
@@ -60,68 +60,81 @@
             org.apache.aries.subsystem.*
         </aries.osgi.private.pkg>
         <lastReleaseVersion>1.0.0</lastReleaseVersion>
+
+        <org.apache.aries.application.api.version>1.0.0</org.apache.aries.application.api.version>
+        <org.apache.aries.application.modeller.version>1.0.0</org.apache.aries.application.modeller.version>
+        <org.apache.aries.application.utils.version>1.0.0</org.apache.aries.application.utils.version>
+        <org.apache.aries.blueprint.version>1.0.0</org.apache.aries.blueprint.version>
+        <org.apache.aries.proxy.version>1.0.1</org.apache.aries.proxy.version>
+        <org.apache.aries.subsystem.api.version>2.0.10</org.apache.aries.subsystem.api.version>
+        <org.apache.aries.subsystem.core.version>2.0.10</org.apache.aries.subsystem.core.version>
+        <org.apache.aries.util.version>1.1.1</org.apache.aries.util.version>
+        <org.apache.felix.resolver.version>1.0.0</org.apache.felix.resolver.version>
+        <org.eclipse.equinox.coordinator.version>1.1.0.v20120522-1841</org.eclipse.equinox.coordinator.version>
+        <org.eclipse.equinox.region.version>1.2.101.v20150831-1342</org.eclipse.equinox.region.version>
+        <org.eclipse.osgi.version>3.10.0.v20140606-1445</org.eclipse.osgi.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.aries.subsystem</groupId>
             <artifactId>org.apache.aries.subsystem.api</artifactId>
-            <version>2.0.10</version>
+            <version>${org.apache.aries.subsystem.api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.subsystem</groupId>
             <artifactId>org.apache.aries.subsystem.core</artifactId>
-            <version>2.0.10</version>
+            <version>${org.apache.aries.subsystem.core.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries</groupId>
             <artifactId>org.apache.aries.util</artifactId>
-            <version>1.1.1</version>
+            <version>${org.apache.aries.util.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.api</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.modeller</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.modeller.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.utils</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.utils.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
             <artifactId>org.apache.aries.blueprint</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.blueprint.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.proxy</groupId>
             <artifactId>org.apache.aries.proxy</artifactId>
-            <version>1.0.1</version>
+            <version>${org.apache.aries.proxy.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.resolver</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.felix.resolver.version}</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.equinox</groupId>
             <artifactId>org.eclipse.equinox.coordinator</artifactId>
-            <version>1.1.0.v20120522-1841</version>
+            <version>${org.eclipse.equinox.coordinator.version}</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.equinox</groupId>
             <artifactId>org.eclipse.equinox.region</artifactId>
-            <version>1.2.101.v20150831-1342</version>
+            <version>${org.eclipse.equinox.region.version}</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.tycho</groupId>
             <artifactId>org.eclipse.osgi</artifactId>
-            <version>3.10.0.v20140606-1445</version>
+            <version>${org.eclipse.osgi.version}</version>
         </dependency>
     </dependencies>
 

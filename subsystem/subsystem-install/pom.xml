@@ -17,7 +17,7 @@
  under the License.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.apache.aries</groupId>
@@ -43,13 +43,16 @@
         <aries.osgi.private.pkg>
             org.apache.aries.subsystem.install.internal
         </aries.osgi.private.pkg>
+
+        <org.apache.aries.subsystem.api.version>1.2.0-SNAPSHOT</org.apache.aries.subsystem.api.version>
+        <org.apache.felix.fileinstall.version>2.0.8</org.apache.felix.fileinstall.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.aries.subsystem</groupId>
             <artifactId>org.apache.aries.subsystem.api</artifactId>
-            <version>1.2.0-SNAPSHOT</version>
+            <version>${org.apache.aries.subsystem.api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
@@ -59,7 +62,7 @@
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.fileinstall</artifactId>
-            <version>2.0.8</version>
+            <version>${org.apache.felix.fileinstall.version}</version>
         </dependency>
     </dependencies>
 
