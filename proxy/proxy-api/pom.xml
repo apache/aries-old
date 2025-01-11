@@ -41,17 +41,17 @@
         <connection>scm:git:https://gitbox.apache.org/repos/asf/aries.git</connection>
         <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/aries.git</developerConnection>
         <url>https://gitbox.apache.org/repos/asf?p=aries.git;a=summary</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <properties>
         <!-- Export package versions are maintained in packageinfo files -->
         <aries.osgi.export.pkg>
             org.apache.aries.proxy*
         </aries.osgi.export.pkg>
-        <aries.osgi.private.pkg />
+        <aries.osgi.private.pkg/>
         <lastReleaseVersion>1.1.1</lastReleaseVersion>
-        
+
         <!-- Skip version check for release 1.1.0 as the plugin does not handle the case
              of removing a dpendency correctly -->
         <aries.skip.version.check>true</aries.skip.version.check>
@@ -64,7 +64,7 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>
