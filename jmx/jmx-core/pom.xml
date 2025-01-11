@@ -26,16 +26,16 @@
         <artifactId>parent</artifactId>
         <version>2.0.1</version>
         <relativePath>../../parent/pom.xml</relativePath>
-    </parent>  
+    </parent>
 
     <groupId>org.apache.aries.jmx</groupId>
     <artifactId>org.apache.aries.jmx.core</artifactId>
-	<version>1.1.9-SNAPSHOT</version>
+    <version>1.1.9-SNAPSHOT</version>
     <packaging>bundle</packaging>
     <name>Apache Aries JMX Core</name>
     <description>
-        This bundle contains the core implementation 
-		of the JMX Control specification
+        This bundle contains the core implementation
+        of the JMX Control specification
     </description>
 
     <scm>
@@ -76,13 +76,18 @@
             javax.management.MBeanServer
         </aries.osgi.import.service>
         <lastReleaseVersion>1.1.1</lastReleaseVersion>
+
+        <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
+        <mockito-all.version>1.8.2</mockito-all.version>
+        <org.apache.aries.jmx.api.version>1.1.5</org.apache.aries.jmx.api.version>
+        <org.apache.aries.util.version>1.1.1</org.apache.aries.util.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.aries.jmx</groupId>
             <artifactId>org.apache.aries.jmx.api</artifactId>
-            <version>1.1.5</version>
+            <version>${org.apache.aries.jmx.api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
@@ -97,18 +102,18 @@
         <dependency>
             <groupId>org.apache.aries</groupId>
             <artifactId>org.apache.aries.util</artifactId>
-            <version>1.1.1</version>
+            <version>${org.apache.aries.util.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-all</artifactId>
             <scope>test</scope>
-            <version>1.8.2</version>
+            <version>${mockito-all.version}</version>
         </dependency>
         <dependency>
-             <groupId>junit</groupId>
-             <artifactId>junit</artifactId>
-             <scope>test</scope>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -117,7 +122,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
+                <version>${maven-compiler-plugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.aries.versioning</groupId>
@@ -134,12 +139,12 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                 <artifactId>maven-javadoc-plugin</artifactId>
-                 <configuration>
-                     <additionalparam>-Xdoclint:none</additionalparam>
-                 </configuration>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <additionalparam>-Xdoclint:none</additionalparam>
+                </configuration>
             </plugin>
         </plugins>
     </build>
 
- </project>
+</project>
