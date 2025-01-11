@@ -23,8 +23,8 @@
 
     <parent>
         <groupId>org.apache.aries</groupId>
-        <artifactId>java5-parent</artifactId>
-        <version>1.0.0</version>
+        <artifactId>parent</artifactId>
+        <version>2.1.1</version>
         <relativePath />
     </parent>
 
@@ -46,7 +46,7 @@
             ${project.artifactId};blueprint.graceperiod:=false
         </aries.osgi.symbolic.name>
         <aries.osgi.import>
-            org.objectweb.asm*;version=3.2;resolution:=optional,
+            org.objectweb.asm*;version="[9,10)";resolution:=optional,
             org.osgi.framework;version="[1.5,2)",
             org.slf4j;version="[1.5,2)",
             *
@@ -58,6 +58,7 @@
             org.apache.aries.versioning.utils;
         </aries.osgi.private.pkg>
         <lastReleaseVersion>0.2.0</lastReleaseVersion>
+        <aries.skip.version.check>true</aries.skip.version.check>
     </properties>
 	
     <dependencies>
@@ -82,9 +83,15 @@
         </dependency>
         <dependency>
             <groupId>org.ow2.asm</groupId>
-            <artifactId>asm-debug-all</artifactId>
+            <artifactId>asm</artifactId>
             <optional>true</optional>
-            <version>5.0.3</version>
+            <version>9.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-commons</artifactId>
+            <optional>true</optional>
+            <version>9.6</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
