@@ -104,14 +104,19 @@
         </aries.osgi.failok>
         <lastReleaseVersion>1.1.0</lastReleaseVersion>
 
+        <asm-debug-all.version>5.0.3</asm-debug-all.version>
         <blueprint.api.version>${blueprint.api.dev.version}</blueprint.api.version>
-        <blueprint.core.version>${blueprint.core.dev.version}</blueprint.core.version>
-        <blueprint.cm.version>${blueprint.cm.dev.version}</blueprint.cm.version>
-        <blueprint.parser.version>${blueprint.parser.dev.version}</blueprint.parser.version>
         <blueprint.authz.version>${blueprint.authz.dev.version}</blueprint.authz.version>
-        <blueprint.spring.version>${blueprint.spring.dev.version}</blueprint.spring.version>
-        <blueprint.spring.extender.version>${blueprint.spring.extender.dev.version}</blueprint.spring.extender.version>
+        <blueprint.cm.version>${blueprint.cm.dev.version}</blueprint.cm.version>
+        <blueprint.core.version>${blueprint.core.dev.version}</blueprint.core.version>
         <blueprint.jexl.evaluator.version>${blueprint.jexl.evaluator.dev.version}</blueprint.jexl.evaluator.version>
+        <blueprint.parser.version>${blueprint.parser.dev.version}</blueprint.parser.version>
+        <blueprint.spring.extender.version>${blueprint.spring.extender.dev.version}</blueprint.spring.extender.version>
+        <blueprint.spring.version>${blueprint.spring.dev.version}</blueprint.spring.version>
+        <org.apache.aries.proxy.api.version>1.0.0</org.apache.aries.proxy.api.version>
+        <org.apache.aries.proxy.impl.version>1.0.3</org.apache.aries.proxy.impl.version>
+        <org.apache.aries.quiesce.api.version>1.0.0</org.apache.aries.quiesce.api.version>
+        <org.apache.aries.versioning.plugin.version>0.3.1</org.apache.aries.versioning.plugin.version>
     </properties>
 
     <dependencies>
@@ -136,19 +141,19 @@
         <dependency>
             <groupId>org.apache.aries.proxy</groupId>
             <artifactId>org.apache.aries.proxy.api</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.proxy.api.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.proxy</groupId>
             <artifactId>org.apache.aries.proxy.impl</artifactId>
-            <version>1.0.3</version>
+            <version>${org.apache.aries.proxy.impl.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm-debug-all</artifactId>
-            <version>5.0.3</version>
+            <version>${asm-debug-all.version}</version>
             <scope>test</scope>
             <optional>true</optional>
         </dependency>
@@ -161,7 +166,7 @@
             <groupId>org.apache.aries.quiesce</groupId>
             <artifactId>org.apache.aries.quiesce.api</artifactId>
             <scope>provided</scope>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.quiesce.api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -219,11 +224,11 @@
                     </execution>
                 </executions>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.apache.aries.versioning</groupId>
                 <artifactId>org.apache.aries.versioning.plugin</artifactId>
-                <version>0.3.1</version>
+                <version>${org.apache.aries.versioning.plugin.version}</version>
                 <configuration>
                     <excludes>
                         <exclude>method org.apache.aries.blueprint.di.Repository getRepository() has been deleted</exclude>

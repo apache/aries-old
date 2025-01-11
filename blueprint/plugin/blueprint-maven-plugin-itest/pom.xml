@@ -35,7 +35,11 @@
     <name>Apache Aries Blueprint Maven Plugin iTest</name>
 
     <properties>
+        <java.target.version>1.7</java.target.version>
+        <java.source.version>1.7</java.source.version>
+
         <blueprint-maven-plugin.version>1.9.1-SNAPSHOT</blueprint-maven-plugin.version>
+        <maven-invoker-plugin.version>1.10</maven-invoker-plugin.version>
     </properties>
 
     <scm>
@@ -49,8 +53,8 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <target>1.7</target>
-                    <source>1.7</source>
+                    <target>${java.target.version}</target>
+                    <source>${java.source.version}</source>
                 </configuration>
             </plugin>
         </plugins>
@@ -64,7 +68,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-invoker-plugin</artifactId>
-                        <version>1.10</version>
+                        <version>${maven-invoker-plugin.version}</version>
                         <configuration>
                             <projectsDirectory>src/it</projectsDirectory>
                             <pomIncludes>

@@ -40,12 +40,13 @@
         <aries.osgi.import.pkg>javax.annotation.security,*</aries.osgi.import.pkg>
         <aries.osgi.private.pkg>org.apache.aries.blueprint.authorization.impl</aries.osgi.private.pkg>
         <aries.osgi.activator>org.apache.aries.blueprint.authorization.impl.Activator</aries.osgi.activator>
-        
+
         <!-- Not exporting any packages -->
         <aries.skip.version.check>true</aries.skip.version.check>
 
         <blueprint.api.version>1.0.0</blueprint.api.version>
         <blueprint.parser.version>1.0.0</blueprint.parser.version>
+        <javax.annotation-api.version>1.2</javax.annotation-api.version>
     </properties>
 
     <profiles>
@@ -73,7 +74,7 @@
         <dependency>
             <groupId>javax.annotation</groupId>
             <artifactId>javax.annotation-api</artifactId>
-            <version>1.2</version>
+            <version>${javax.annotation-api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>

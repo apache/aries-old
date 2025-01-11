@@ -41,12 +41,13 @@
         <connection>scm:git:https://gitbox.apache.org/repos/asf/aries.git</connection>
         <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/aries.git</developerConnection>
         <url>https://gitbox.apache.org/repos/asf?p=aries.git;a=summary</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <properties>
-        <blueprint.api.version>1.0.0</blueprint.api.version>
         <lastReleaseVersion>1.4.0</lastReleaseVersion>
+
+        <blueprint.api.version>1.0.0</blueprint.api.version>
     </properties>
 
     <profiles>

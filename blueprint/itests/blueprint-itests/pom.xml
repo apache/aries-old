@@ -42,26 +42,38 @@
     </scm>
     
     <properties>
-        <exam.version>4.10.0</exam.version>
-        <url.version>2.5.3</url.version>
-
+        <asm-debug-all.version>5.0.3</asm-debug-all.version>
         <blueprint.api.version>${blueprint.api.dev.version}</blueprint.api.version>
-        <blueprint.core.version>${blueprint.core.dev.version}</blueprint.core.version>
-        <blueprint.cm.version>${blueprint.cm.dev.version}</blueprint.cm.version>
-        <blueprint.parser.version>${blueprint.parser.dev.version}</blueprint.parser.version>
         <blueprint.authz.version>${blueprint.authz.dev.version}</blueprint.authz.version>
-        <blueprint.spring.version>${blueprint.spring.dev.version}</blueprint.spring.version>
-        <blueprint.spring.extender.version>${blueprint.spring.extender.dev.version}</blueprint.spring.extender.version>
+        <blueprint.cm.version>${blueprint.cm.dev.version}</blueprint.cm.version>
+        <blueprint.core.version>${blueprint.core.dev.version}</blueprint.core.version>
         <blueprint.jexl.evaluator.version>${blueprint.jexl.evaluator.dev.version}</blueprint.jexl.evaluator.version>
-        <blueprint.sample.version>${blueprint.sample.dev.version}</blueprint.sample.version>
+        <blueprint.parser.version>${blueprint.parser.dev.version}</blueprint.parser.version>
         <blueprint.sample.fragment.version>${blueprint.sample.fragment.dev.version}</blueprint.sample.fragment.version>
+        <blueprint.sample.version>${blueprint.sample.dev.version}</blueprint.sample.version>
+        <blueprint.spring.extender.version>${blueprint.spring.extender.dev.version}</blueprint.spring.extender.version>
+        <blueprint.spring.version>${blueprint.spring.dev.version}</blueprint.spring.version>
+        <commons-jexl.version>2.0</commons-jexl.version>
+        <depends-maven-plugin.version>1.4.0</depends-maven-plugin.version>
+        <exam.version>4.10.0</exam.version>
+        <org.apache.aries.proxy.version>1.1.0</org.apache.aries.proxy.version>
+        <org.apache.aries.quiesce.api.version>1.0.0</org.apache.aries.quiesce.api.version>
+        <org.apache.aries.testsupport.unit.version>2.0.0-SNAPSHOT</org.apache.aries.testsupport.unit.version>
+        <org.apache.felix.configadmin.version>1.8.0</org.apache.felix.configadmin.version>
+        <org.apache.servicemix.bundles.aopalliance.version>1.0_6</org.apache.servicemix.bundles.aopalliance.version>
+        <org.apache.servicemix.bundles.spring.version>4.2.2.RELEASE_1</org.apache.servicemix.bundles.spring.version>
+        <org.eclipse.osgi.version>3.11.3</org.eclipse.osgi.version>
+        <slf4j.version>1.7.7</slf4j.version>
+        <tinybundles.version>2.0.0</tinybundles.version>
+        <url.version>2.5.3</url.version>
+        <xbean.version>3.18</xbean.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.osgi</artifactId>
-            <version>3.11.3</version>
+            <version>${org.eclipse.osgi.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -92,54 +104,54 @@
         <dependency>
             <groupId>org.apache.aries.proxy</groupId>
             <artifactId>org.apache.aries.proxy</artifactId>
-            <version>1.1.0</version>
+            <version>${org.apache.aries.proxy.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.spring-context</artifactId>
-            <version>4.2.2.RELEASE_1</version>
+            <version>${org.apache.servicemix.bundles.spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.spring-tx</artifactId>
-            <version>4.2.2.RELEASE_1</version>
+            <version>${org.apache.servicemix.bundles.spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.spring-context-support</artifactId>
-            <version>4.2.2.RELEASE_1</version>
+            <version>${org.apache.servicemix.bundles.spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.spring-beans</artifactId>
-            <version>4.2.2.RELEASE_1</version>
+            <version>${org.apache.servicemix.bundles.spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.spring-aop</artifactId>
-            <version>4.2.2.RELEASE_1</version>
+            <version>${org.apache.servicemix.bundles.spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.spring-core</artifactId>
-            <version>4.2.2.RELEASE_1</version>
+            <version>${org.apache.servicemix.bundles.spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.spring-expression</artifactId>
-            <version>4.2.2.RELEASE_1</version>
+            <version>${org.apache.servicemix.bundles.spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.aopalliance</artifactId>
-            <version>1.0_6</version>
+            <version>${org.apache.servicemix.bundles.aopalliance.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.quiesce</groupId>
             <artifactId>org.apache.aries.quiesce.api</artifactId>
             <type>bundle</type>
             <scope>provided</scope>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.quiesce.api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
@@ -170,7 +182,7 @@
             <groupId>org.apache.aries.testsupport</groupId>
             <artifactId>org.apache.aries.testsupport.unit</artifactId>
             <scope>test</scope>
-            <version>2.0.0-SNAPSHOT</version>
+            <version>${org.apache.aries.testsupport.unit.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
@@ -212,7 +224,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.7</version>
+            <version>${slf4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.exam</groupId>
@@ -247,7 +259,7 @@
         <dependency>
             <groupId>org.ops4j.pax.tinybundles</groupId>
             <artifactId>tinybundles</artifactId>
-            <version>2.0.0</version>
+            <version>${tinybundles.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -259,28 +271,28 @@
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.configadmin</artifactId>
             <scope>test</scope>
-            <version>1.8.0</version>
+            <version>${org.apache.felix.configadmin.version}</version>
         </dependency>
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm-debug-all</artifactId>
             <scope>test</scope>
-            <version>5.0.3</version>
+            <version>${asm-debug-all.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.xbean</groupId>
             <artifactId>xbean-asm5-shaded</artifactId>
-            <version>3.18</version>
+            <version>${xbean.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.xbean</groupId>
             <artifactId>xbean-bundleutils</artifactId>
-            <version>3.18</version>
+            <version>${xbean.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.xbean</groupId>
             <artifactId>xbean-finder</artifactId>
-            <version>3.18</version>
+            <version>${xbean.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
@@ -304,7 +316,7 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-jexl</artifactId>
-            <version>2.0</version>
+            <version>${commons-jexl.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -337,7 +349,7 @@
             <plugin>
                 <groupId>org.apache.servicemix.tooling</groupId>
                 <artifactId>depends-maven-plugin</artifactId>
-                <version>1.4.0</version>
+                <version>${depends-maven-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>generate-depends-file</id>
