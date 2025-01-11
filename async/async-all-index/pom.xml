@@ -25,7 +25,7 @@
         <groupId>org.apache.aries</groupId>
         <artifactId>parent</artifactId>
         <version>2.0.0</version>
-        <relativePath>../parent/pom.xml</relativePath>
+        <relativePath>../../parent/pom.xml</relativePath>
     </parent>
 
     <groupId>org.apache.aries.async</groupId>
@@ -34,7 +34,7 @@
     <packaging>pom</packaging>
     <version>1.1.0-SNAPSHOT</version>
     <description>
-       An index for the Apache Aries Async Service (all-in-one)
+        An index for the Apache Aries Async Service (all-in-one)
     </description>
 
     <scm>
@@ -43,12 +43,14 @@
         <url>https://gitbox.apache.org/repos/asf?p=aries.git;a=summary</url>
     </scm>
 
-
     <properties>
         <local.url.policy>REQUIRED</local.url.policy>
+
+        <bnd-indexer-maven-plugin.version>3.1.0</bnd-indexer-maven-plugin.version>
+        <org.apache.aries.async.version>1.1.0-SNAPSHOT</org.apache.aries.async.version>
     </properties>
-    
-    
+
+
     <profiles>
         <profile>
             <id>apache-release</id>
@@ -63,13 +65,13 @@
             </properties>
         </profile>
     </profiles>
-    
+
 
     <dependencies>
         <dependency>
             <groupId>org.apache.aries.async</groupId>
             <artifactId>org.apache.aries.async</artifactId>
-            <version>1.1.0-SNAPSHOT</version>
+            <version>${org.apache.aries.async.version}</version>
         </dependency>
     </dependencies>
 
@@ -78,7 +80,7 @@
             <plugin>
                 <groupId>biz.aQute.bnd</groupId>
                 <artifactId>bnd-indexer-maven-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>${bnd-indexer-maven-plugin.version}</version>
                 <configuration>
                     <localURLs>${local.url.policy}</localURLs>
                 </configuration>
