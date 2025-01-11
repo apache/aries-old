@@ -25,7 +25,7 @@
         <groupId>org.apache.aries</groupId>
         <artifactId>parent</artifactId>
         <version>2.1.1</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
     <groupId>org.apache.aries.versioning</groupId>
@@ -39,12 +39,25 @@
         <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/aries.git</developerConnection>
         <url>https://gitbox.apache.org/repos/asf?p=aries.git;a=summary</url>
     </scm>
-    
+
+    <properties>
+        <maven-artifact-resolver.version>1.0</maven-artifact-resolver.version>
+        <maven-artifact.version>3.0.3</maven-artifact.version>
+        <maven-common-artifact-filters.version>1.4</maven-common-artifact-filters.version>
+        <maven-compat.version>3.0.3</maven-compat.version>
+        <maven-core.version>3.0.3</maven-core.version>
+        <maven-plugin-annotations.version>3.2</maven-plugin-annotations.version>
+        <maven-plugin-api.version>3.0.3</maven-plugin-api.version>
+        <maven-plugin-plugin.version>3.3</maven-plugin-plugin.version>
+        <maven-release-plugin.version>2.5.2</maven-release-plugin.version>
+        <org.apache.aries.versioning.checker.version>0.3.2-SNAPSHOT</org.apache.aries.versioning.checker.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.aries.versioning</groupId>
             <artifactId>org.apache.aries.versioning.checker</artifactId>
-            <version>0.3.2-SNAPSHOT</version>
+            <version>${org.apache.aries.versioning.checker.version}</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
@@ -61,22 +74,22 @@
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-plugin-api</artifactId>
-            <version>3.0.3</version>
+            <version>${maven-plugin-api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-artifact</artifactId>
-            <version>3.0.3</version>
+            <version>${maven-artifact.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-core</artifactId>
-            <version>3.0.3</version>
+            <version>${maven-core.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-compat</artifactId>
-            <version>3.0.3</version>
+            <version>${maven-compat.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -87,19 +100,19 @@
         <dependency>
             <groupId>org.apache.maven.plugin-tools</groupId>
             <artifactId>maven-plugin-annotations</artifactId>
-            <version>3.2</version>
+            <version>${maven-plugin-annotations.version}</version>
             <scope>provided</scope>
         </dependency>
         <!-- maven shared -->
         <dependency>
             <groupId>org.apache.maven.shared</groupId>
             <artifactId>maven-artifact-resolver</artifactId>
-            <version>1.0</version>
+            <version>${maven-artifact-resolver.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven.shared</groupId>
             <artifactId>maven-common-artifact-filters</artifactId>
-            <version>1.4</version>
+            <version>${maven-common-artifact-filters.version}</version>
         </dependency>
     </dependencies>
 
@@ -107,7 +120,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-plugin-plugin</artifactId>
-                <version>3.3</version>
+                <version>${maven-plugin-plugin.version}</version>
                 <configuration>
                     <goalPrefix>asv</goalPrefix>
                     <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
@@ -123,7 +136,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.2</version>
+                <version>${maven-release-plugin.version}</version>
             </plugin>
         </plugins>
     </build>
