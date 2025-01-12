@@ -21,7 +21,6 @@ See [Apache Aries Website](http://aries.apache.org/).
 - [![SPI Fly - CI Build](https://github.com/apache/aries/actions/workflows/spi-fly.yml/badge.svg)](https://github.com/apache/aries/actions/workflows/spi-fly.yml)
 - [![Subsystem - CI Build](https://github.com/apache/aries/actions/workflows/subsystem.yml/badge.svg)](https://github.com/apache/aries/actions/workflows/subsystem.yml)
 - [![Transaction - CI Build](https://github.com/apache/aries/actions/workflows/transaction.yml/badge.svg)](https://github.com/apache/aries/actions/workflows/transaction.yml)
-- Tutorials - Missing
 - [![Versioning - CI Build](https://github.com/apache/aries/actions/workflows/versioning.yml/badge.svg)](https://github.com/apache/aries/actions/workflows/versioning.yml)
 - [![Web - CI Build](https://github.com/apache/aries/actions/workflows/web.yml/badge.svg)](https://github.com/apache/aries/actions/workflows/web.yml)
 - [![Util - CI Build](https://github.com/apache/aries/actions/workflows/util.yml/badge.svg)](https://github.com/apache/aries/actions/workflows/util.yml)
