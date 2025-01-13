@@ -34,11 +34,13 @@ jobs:
     timeout-minutes: 10
     strategy:
       matrix:
-        java: [ 8, 11, 17, 18, 19-ea ]
+        java: [ 8, 11, 17, 21 ]
         os: [ ubuntu-latest ]
         include:
         - os: windows-latest
           java: 17
+        - os: windows-latest
+          java: 21
     name: JDK${{ matrix.java }} ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     steps:
