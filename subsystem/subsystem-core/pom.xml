@@ -45,75 +45,87 @@
         <aries.osgi.activator>
             org.apache.aries.subsystem.core.internal.Activator
         </aries.osgi.activator>
-    	<aries.osgi.import>
+        <aries.osgi.import>
             org.osgi.service.subsystem;version="[1.1,1.2)",
             org.apache.aries.subsystem;version="[1.2,1.3)",
             org.apache.aries.application.*;resolution:=optional,
             *
         </aries.osgi.import>
-        <aries.osgi.export.pkg />
+        <aries.osgi.export.pkg/>
         <aries.osgi.private.pkg>
             org.apache.aries.subsystem.core.*
         </aries.osgi.private.pkg>
         <lastReleaseVersion>1.0.0</lastReleaseVersion>
         <aries.osgi.provide.capability>
-        	osgi.implementation;
-    			osgi.implementation="osgi.subsystem";
-    			version:Version="1.1";
-    			uses:="org.osgi.service.subsystem",
-    		osgi.service;
-    			objectClass:List&lt;String&gt;="org.osgi.service.subsystem.Subsystem,org.apache.aries.subsystem.AriesSubsystem";
-    			uses:="org.osgi.service.subsystem,org.apache.aries.subsystem"
+            osgi.implementation;
+            osgi.implementation="osgi.subsystem";
+            version:Version="1.1";
+            uses:="org.osgi.service.subsystem",
+            osgi.service;
+            objectClass:List&lt;String&gt;="org.osgi.service.subsystem.Subsystem,org.apache.aries.subsystem.AriesSubsystem";
+            uses:="org.osgi.service.subsystem,org.apache.aries.subsystem"
         </aries.osgi.provide.capability>
+
+
+        <org.apache.aries.subsystem.api.version>2.0.10</org.apache.aries.subsystem.api.version>
+        <org.apache.aries.util.version>1.1.1</org.apache.aries.util.version>
+        <org.apache.aries.application.api.version>1.0.0</org.apache.aries.application.api.version>
+        <org.apache.aries.application.utils.version>1.0.0</org.apache.aries.application.utils.version>
+        <org.osgi.core.version>6.0.0</org.osgi.core.version>
+        <org.osgi.enterprise.version>5.0.0</org.osgi.enterprise.version>
+        <org.eclipse.equinox.coordinator.version>1.1.0.v20120522-1841</org.eclipse.equinox.coordinator.version>
+        <org.eclipse.equinox.region.version>1.2.101.v20150831-1342</org.eclipse.equinox.region.version>
+        <easymock.version>3.0</easymock.version>
+        <maven-bundle-plugin.version>2.5.0</maven-bundle-plugin.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.aries.subsystem</groupId>
             <artifactId>org.apache.aries.subsystem.api</artifactId>
-            <version>2.0.10</version>
+            <version>${org.apache.aries.subsystem.api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries</groupId>
             <artifactId>org.apache.aries.util</artifactId>
-            <version>1.1.1</version>
+            <version>${org.apache.aries.util.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.api</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.utils</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.utils.version}</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.core</artifactId>
-            <version>6.0.0</version>
+            <version>${org.osgi.core.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.enterprise</artifactId>
-            <version>5.0.0</version>
+            <version>${org.osgi.enterprise.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.eclipse.equinox</groupId>
             <artifactId>org.eclipse.equinox.coordinator</artifactId>
-            <version>1.1.0.v20120522-1841</version>
+            <version>${org.eclipse.equinox.coordinator.version}</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.equinox</groupId>
             <artifactId>org.eclipse.equinox.region</artifactId>
-            <version>1.2.101.v20150831-1342</version>
+            <version>${org.eclipse.equinox.region.version}</version>
         </dependency>
         <dependency>
             <groupId>org.easymock</groupId>
             <artifactId>easymock</artifactId>
-            <version>3.0</version>
+            <version>${easymock.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -150,7 +162,7 @@
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
-                <version>2.5.0</version>
+                <version>${maven-bundle-plugin.version}</version>
                 <extensions>true</extensions>
                 <inherited>true</inherited>
                 <configuration>

@@ -19,18 +19,18 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
     <parent>
-       <groupId>org.apache.aries</groupId>
-       <artifactId>parent</artifactId>
-       <version>2.0.0</version>
-       <relativePath>../../parent/pom.xml</relativePath>
+        <groupId>org.apache.aries</groupId>
+        <artifactId>parent</artifactId>
+        <version>2.0.0</version>
+        <relativePath>../../parent/pom.xml</relativePath>
     </parent>
 
-	<groupId>org.apache.aries.application</groupId>
-	<artifactId>org.apache.aries.application-isolated-distro</artifactId>
-	<name>Application distribution for isolated application support</name>
+    <groupId>org.apache.aries.application</groupId>
+    <artifactId>org.apache.aries.application-isolated-distro</artifactId>
+    <name>Application distribution for isolated application support</name>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -40,89 +40,105 @@
         <url>https://gitbox.apache.org/repos/asf?p=aries.git;a=summary</url>
     </scm>
 
+    <properties>
+        <maven-assembly-plugin.version>2.2-beta-5</maven-assembly-plugin.version>
+        <org.apache.aries.application.api.version>1.0.0</org.apache.aries.application.api.version>
+        <org.apache.aries.application.default.local.platform.version>1.0.0</org.apache.aries.application.default.local.platform.version>
+        <org.apache.aries.application.deployment.management.version>1.0.0</org.apache.aries.application.deployment.management.version>
+        <org.apache.aries.application.install.version>1.0.0</org.apache.aries.application.install.version>
+        <org.apache.aries.application.management.version>1.0.0</org.apache.aries.application.management.version>
+        <org.apache.aries.application.modeller.version>1.0.0</org.apache.aries.application.modeller.version>
+        <org.apache.aries.application.resolver.obr.version>1.0.0</org.apache.aries.application.resolver.obr.version>
+        <org.apache.aries.application.runtime.framework.management.version>1.0.0</org.apache.aries.application.runtime.framework.management.version>
+        <org.apache.aries.application.runtime.framework.version>1.0.0</org.apache.aries.application.runtime.framework.version>
+        <org.apache.aries.application.runtime.isolated.version>1.0.0</org.apache.aries.application.runtime.isolated.version>
+        <org.apache.aries.application.runtime.repository.version>1.0.0</org.apache.aries.application.runtime.repository.version>
+        <org.apache.aries.application.utils.version>1.0.0</org.apache.aries.application.utils.version>
+    </properties>
+
     <dependencies>
-       <dependency>
+        <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.runtime.isolated</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.runtime.isolated.version}</version>
         </dependency>
-       <dependency>
+        <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.runtime.framework</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.runtime.framework.version}</version>
         </dependency>
-       <dependency>
+        <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.runtime.framework.management</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.runtime.framework.management.version}</version>
         </dependency>
-       <dependency>
+        <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.runtime.repository</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.runtime.repository.version}</version>
         </dependency>
-       <dependency>
+        <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.resolver.obr</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.resolver.obr.version}</version>
         </dependency>
-       <dependency>
+        <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.install</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.install.version}</version>
         </dependency>
-       <dependency>
+        <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.api</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.api.version}</version>
         </dependency>
-       <dependency>
+        <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.management</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.management.version}</version>
         </dependency>
-       <dependency>
+        <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.utils</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.utils.version}</version>
         </dependency>
-       <dependency>
+        <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.modeller</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.modeller.version}</version>
         </dependency>
-       <dependency>
+        <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.default.local.platform</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.default.local.platform.version}</version>
         </dependency>
-       <dependency>
+        <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.deployment.management</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.deployment.management.version}</version>
         </dependency>
     </dependencies>
 
     <build>
-		<plugins>
-			<plugin>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.2-beta-5</version>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>${maven-assembly-plugin.version}</version>
                 <executions>
-                  <execution>
-                    <phase>package</phase>
-                       <goals>
-                          <goal>single</goal>
-                       </goals>
-				      <configuration>
-					<descriptors>
-						<descriptor>src/main/assemblies/application-isolated-distro.xml</descriptor>
-					</descriptors>
-				</configuration>
-                </execution>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>src/main/assemblies/application-isolated-distro.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </execution>
                 </executions>
-			</plugin>
-		</plugins>
-	</build>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

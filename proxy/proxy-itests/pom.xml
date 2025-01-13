@@ -43,17 +43,25 @@
     </scm>
 
     <properties>
-        <exam.version>4.13.3</exam.version>
-        <url.version>2.5.3</url.version>
-        <logback.version>1.5.16</logback.version>
         <asm.version>9.6</asm.version>
+        <depends-maven-plugin.version>1.2</depends-maven-plugin.version>
+        <exam.version>4.13.3</exam.version>
+        <javax.inject.version>1</javax.inject.version>
+        <logback.version>1.5.16</logback.version>
+        <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
+        <org.apache.aries.proxy.api.version>1.1.2-SNAPSHOT</org.apache.aries.proxy.api.version>
+        <org.apache.aries.proxy.version>1.1.15-SNAPSHOT</org.apache.aries.proxy.version>
+        <org.eclipse.osgi.version>3.11.3</org.eclipse.osgi.version>
+        <slf4j-api.version>1.7.7</slf4j-api.version>
+        <tinybundles.version>2.0.0</tinybundles.version>
+        <url.version>2.5.3</url.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.eclipse.platform</groupId>
             <artifactId>org.eclipse.osgi</artifactId>
-            <version>3.11.3</version>
+            <version>${org.eclipse.osgi.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -65,20 +73,20 @@
             <groupId>org.apache.aries.proxy</groupId>
             <artifactId>org.apache.aries.proxy.api</artifactId>
             <scope>test</scope>
-            <version>1.1.2-SNAPSHOT</version>
+            <version>${org.apache.aries.proxy.api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.proxy</groupId>
             <artifactId>org.apache.aries.proxy</artifactId>
             <scope>test</scope>
-            <version>1.1.15-SNAPSHOT</version>
+            <version>${org.apache.aries.proxy.version}</version>
         </dependency>
 
         <!-- pax exam -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.7</version>
+            <version>${slf4j-api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.exam</groupId>
@@ -125,7 +133,7 @@
         <dependency>
             <groupId>org.ops4j.pax.tinybundles</groupId>
             <artifactId>tinybundles</artifactId>
-            <version>2.0.0</version>
+            <version>${tinybundles.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -160,7 +168,7 @@
         <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
-            <version>1</version>
+            <version>${javax.inject.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -179,7 +187,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
+                <version>${maven-compiler-plugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -191,7 +199,7 @@
             <plugin>
                 <groupId>org.apache.servicemix.tooling</groupId>
                 <artifactId>depends-maven-plugin</artifactId>
-                <version>1.2</version>
+                <version>${depends-maven-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>generate-depends-file</id>

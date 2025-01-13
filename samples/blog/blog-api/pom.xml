@@ -30,13 +30,13 @@
     <packaging>bundle</packaging>
 
     <properties>
-         <!-- Export package versions are maintained in packageinfo files -->
-         <aries.osgi.export.pkg>
-              org.apache.aries.samples.blog.api,
-              org.apache.aries.samples.blog.api.comment.persistence,
-              org.apache.aries.samples.blog.api.persistence,
-         </aries.osgi.export.pkg>
-         <aries.osgi.private.pkg />
+        <!-- Export package versions are maintained in packageinfo files -->
+        <aries.osgi.export.pkg>
+            org.apache.aries.samples.blog.api,
+            org.apache.aries.samples.blog.api.comment.persistence,
+            org.apache.aries.samples.blog.api.persistence,
+        </aries.osgi.export.pkg>
+        <aries.osgi.private.pkg/>
     </properties>
 
 </project>

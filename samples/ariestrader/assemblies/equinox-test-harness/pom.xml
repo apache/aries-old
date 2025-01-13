@@ -30,6 +30,12 @@
     <name>Equinox test harness that can be used to install sample EBAs</name>
     <packaging>pom</packaging>
 
+    <properties>
+        <cm.version>3.2.0-v20070116</cm.version>
+        <osgi.version>3.5.0.v20090520</osgi.version>
+        <services.version>3.1.200-v20070605</services.version>
+    </properties>
+
     <dependencies>
 
         <!--
@@ -38,17 +44,17 @@
         <dependency>
             <groupId>org.eclipse</groupId>
             <artifactId>osgi</artifactId>
-            <version>3.5.0.v20090520</version>
+            <version>${osgi.version}</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.equinox</groupId>
             <artifactId>cm</artifactId>
-            <version>3.2.0-v20070116</version>
+            <version>${cm.version}</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.osgi</groupId>
             <artifactId>services</artifactId>
-            <version>3.1.200-v20070605</version>
+            <version>${services.version}</version>
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.logging</groupId>
@@ -127,7 +133,6 @@
             <artifactId>org.apache.felix.bundlerepository</artifactId>
         </dependency>
 
-
         <!--
             Aries Dependencies
         -->
@@ -204,9 +209,9 @@
             <artifactId>org.apache.aries.application.deployment.management</artifactId>
         </dependency>
 
-		<dependency>
-             <groupId>org.apache.aries.application</groupId>
-             <artifactId>org.apache.aries.application.default.local.platform</artifactId>            
+        <dependency>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.default.local.platform</artifactId>
         </dependency>
 
         <dependency>

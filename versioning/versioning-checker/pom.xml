@@ -25,7 +25,7 @@
         <groupId>org.apache.aries</groupId>
         <artifactId>parent</artifactId>
         <version>2.1.1</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
     <groupId>org.apache.aries.versioning</groupId>
@@ -59,20 +59,25 @@
         </aries.osgi.private.pkg>
         <lastReleaseVersion>0.2.0</lastReleaseVersion>
         <aries.skip.version.check>true</aries.skip.version.check>
+
+        <asm.version>9.6</asm.version>
+        <maven-release-plugin.version>2.5.2</maven-release-plugin.version>
+        <org.apache.aries.testsupport.unit.version>1.0.0</org.apache.aries.testsupport.unit.version>
+        <org.apache.aries.util.version>1.1.0</org.apache.aries.util.version>
     </properties>
-	
+
     <dependencies>
         <!-- Dependency on other Aries module bundles -->
         <dependency>
             <groupId>org.apache.aries</groupId>
             <artifactId>org.apache.aries.util</artifactId>
-            <version>1.1.0</version>
+            <version>${org.apache.aries.util.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.testsupport</groupId>
             <artifactId>org.apache.aries.testsupport.unit</artifactId>
             <scope>test</scope>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.testsupport.unit.version}</version>
         </dependency>
 
         <!--External dependencies. Versions may be specified in default parent -->
@@ -85,13 +90,13 @@
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm</artifactId>
             <optional>true</optional>
-            <version>9.6</version>
+            <version>${asm.version}</version>
         </dependency>
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm-commons</artifactId>
             <optional>true</optional>
-            <version>9.6</version>
+            <version>${asm.version}</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
@@ -114,7 +119,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.2</version>
+                <version>${maven-release-plugin.version}</version>
             </plugin>
         </plugins>
     </build>

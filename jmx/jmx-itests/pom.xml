@@ -26,20 +26,36 @@
         <artifactId>org.apache.aries.jmx.parent</artifactId>
         <version>1.1.6-SNAPSHOT</version>
         <relativePath>../jmx-parent</relativePath>
-    </parent>  
+    </parent>
 
     <groupId>org.apache.aries.jmx</groupId>
     <artifactId>org.apache.aries.jmx.itests</artifactId>
     <packaging>jar</packaging>
     <name>Apache Aries JMX integration tests</name>
     <description>
-       Integration tests for the JMX component (using the standalone composite jmx-bundle)
+        Integration tests for the JMX component (using the standalone composite jmx-bundle)
     </description>
 
-     <properties>
+    <properties>
+        <asm-debug-all.version>5.0.3</asm-debug-all.version>
+        <commons-jexl.version>2.0</commons-jexl.version>
+        <depends-maven-plugin.version>1.2</depends-maven-plugin.version>
+        <org.apache.aries.blueprint.jexl.evaluator.version>1.0.0</org.apache.aries.blueprint.jexl.evaluator.version>
+        <org.apache.aries.blueprint.sample.version>1.0.0</org.apache.aries.blueprint.sample.version>
+        <org.apache.aries.blueprint.version>1.0.0</org.apache.aries.blueprint.version>
+        <org.apache.aries.jmx.core.version>1.1.9-SNAPSHOT</org.apache.aries.jmx.core.version>
+        <org.apache.aries.jmx.core.whiteboard.version>1.1.7-SNAPSHOT</org.apache.aries.jmx.core.whiteboard.version>
+        <org.apache.aries.jmx.mbeanserver-platform.version>0.0.2-SNAPSHOT</org.apache.aries.jmx.mbeanserver-platform.version>
+        <org.apache.aries.proxy.version>1.0.2-SNAPSHOT</org.apache.aries.proxy.version>
+        <org.apache.aries.testsupport.unit.version>2.0.0-SNAPSHOT</org.apache.aries.testsupport.unit.version>
+        <org.apache.aries.util.version>1.0.0</org.apache.aries.util.version>
+        <org.apache.felix.configadmin.version>1.8.0</org.apache.felix.configadmin.version>
+        <org.eclipse.osgi.version>3.8.0.v20120529-1548</org.eclipse.osgi.version>
+        <slf4j-api.version>1.7.7</slf4j-api.version>
+        <tinybundles.version>2.0.0</tinybundles.version>
         <exam.version>3.4.0</exam.version>
-        <url.version>2.5.3</url.version>
         <logback.version>1.2.13</logback.version>
+        <url.version>2.5.3</url.version>
     </properties>
 
     <dependencies>
@@ -58,7 +74,7 @@
         <dependency>
             <groupId>org.apache.aries.jmx</groupId>
             <artifactId>org.apache.aries.jmx.core</artifactId>
-            <version>1.1.9-SNAPSHOT</version>
+            <version>${org.apache.aries.jmx.core.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -75,12 +91,12 @@
         <dependency>
             <groupId>org.apache.aries.jmx</groupId>
             <artifactId>org.apache.aries.jmx.core.whiteboard</artifactId>
-            <version>1.1.7-SNAPSHOT</version>
+            <version>${org.apache.aries.jmx.core.whiteboard.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.jmx</groupId>
             <artifactId>org.apache.aries.jmx.mbeanserver-platform</artifactId>
-            <version>0.0.2-SNAPSHOT</version>
+            <version>${org.apache.aries.jmx.mbeanserver-platform.version}</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
@@ -88,74 +104,74 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-          <groupId>org.apache.aries.testsupport</groupId>
-          <artifactId>org.apache.aries.testsupport.unit</artifactId>
-          <version>2.0.0-SNAPSHOT</version>
-          <scope>test</scope>
-        </dependency>       
+            <groupId>org.apache.aries.testsupport</groupId>
+            <artifactId>org.apache.aries.testsupport.unit</artifactId>
+            <version>${org.apache.aries.testsupport.unit.version}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
             <artifactId>org.apache.aries.blueprint.sample</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.blueprint.sample.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
             <artifactId>org.apache.aries.blueprint.jexl.evaluator</artifactId>
             <scope>test</scope>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.blueprint.jexl.evaluator.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-jexl</artifactId>
-            <version>2.0</version>
+            <version>${commons-jexl.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.proxy</groupId>
             <artifactId>org.apache.aries.proxy</artifactId>
-            <version>1.0.2-SNAPSHOT</version>
+            <version>${org.apache.aries.proxy.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm-debug-all</artifactId>
-            <version>5.0.3</version>
+            <version>${asm-debug-all.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>org.apache.felix.configadmin</artifactId>
-                <version>1.8.0</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.felix</groupId>
-                        <artifactId>org.osgi.compendium</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.apache.felix</groupId>
-                        <artifactId>org.osgi.core</artifactId>
-                    </exclusion>
-                </exclusions>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.configadmin</artifactId>
+            <version>${org.apache.felix.configadmin.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>org.osgi.compendium</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>org.osgi.core</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.aries</groupId>
             <artifactId>org.apache.aries.util</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.util.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
             <artifactId>org.apache.aries.blueprint</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.blueprint.version}</version>
             <scope>test</scope>
         </dependency>
-        
-		<!-- pax exam -->
+
+        <!-- pax exam -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.7</version>
+            <version>${slf4j-api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.exam</groupId>
@@ -202,12 +218,12 @@
         <dependency>
             <groupId>org.ops4j.pax.tinybundles</groupId>
             <artifactId>tinybundles</artifactId>
-            <version>2.0.0</version>
+            <version>${tinybundles.version}</version>
             <exclusions>
-            	<exclusion>
-            		<artifactId>org.osgi.core</artifactId>
-            		<groupId>org.osgi</groupId>
-            	</exclusion>
+                <exclusion>
+                    <artifactId>org.osgi.core</artifactId>
+                    <groupId>org.osgi</groupId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
@@ -218,16 +234,16 @@
         <dependency>
             <groupId>org.eclipse</groupId>
             <artifactId>org.eclipse.osgi</artifactId>
-            <version>3.8.0.v20120529-1548</version>
+            <version>${org.eclipse.osgi.version}</version>
         </dependency>
-   </dependencies>
+    </dependencies>
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.servicemix.tooling</groupId>
                 <artifactId>depends-maven-plugin</artifactId>
-                <version>1.2</version>
+                <version>${depends-maven-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>generate-depends-file</id>

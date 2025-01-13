@@ -18,52 +18,55 @@
  under the License.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.apache.aries</groupId>
-    <artifactId>parent</artifactId>
-    <version>2.0.0</version>
-    <relativePath>../../parent/pom.xml</relativePath>
-  </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.apache.aries</groupId>
+        <artifactId>parent</artifactId>
+        <version>2.0.0</version>
+        <relativePath>../../parent/pom.xml</relativePath>
+    </parent>
 
-  <groupId>org.apache.aries.subsystem</groupId>
-  <artifactId>org.apache.aries.subsystem.gogo-command</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
-  <name>Apache Aries Subsystem Gogo command</name>
-  <packaging>bundle</packaging>
+    <groupId>org.apache.aries.subsystem</groupId>
+    <artifactId>org.apache.aries.subsystem.gogo-command</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
+    <name>Apache Aries Subsystem Gogo command</name>
+    <packaging>bundle</packaging>
 
-  <scm>
-    <connection>scm:git:https://gitbox.apache.org/repos/asf/aries.git</connection>
-    <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/aries.git</developerConnection>
-    <url>https://gitbox.apache.org/repos/asf?p=aries.git;a=summary</url>
-  </scm>
+    <scm>
+        <connection>scm:git:https://gitbox.apache.org/repos/asf/aries.git</connection>
+        <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/aries.git</developerConnection>
+        <url>https://gitbox.apache.org/repos/asf?p=aries.git;a=summary</url>
+    </scm>
 
-  <properties>
-    <aries.osgi.activator>
-        org.apache.aries.subsystem.gogo.Activator
-    </aries.osgi.activator>
-    <aries.osgi.export.pkg />
-    <aries.osgi.import>
-        *
-    </aries.osgi.import>
-    <aries.osgi.private.pkg>
-      org.apache.aries.subsystem.gogo.*
-    </aries.osgi.private.pkg>
-    <lastReleaseVersion>1.0.0</lastReleaseVersion>
-  </properties>
+    <properties>
+        <aries.osgi.activator>
+            org.apache.aries.subsystem.gogo.Activator
+        </aries.osgi.activator>
+        <aries.osgi.export.pkg/>
+        <aries.osgi.import>
+            *
+        </aries.osgi.import>
+        <aries.osgi.private.pkg>
+            org.apache.aries.subsystem.gogo.*
+        </aries.osgi.private.pkg>
+        <lastReleaseVersion>1.0.0</lastReleaseVersion>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.osgi</groupId>
-      <artifactId>org.osgi.core</artifactId>
-      <version>5.0.0</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.osgi</groupId>
-      <artifactId>org.osgi.enterprise</artifactId>
-      <version>5.0.0</version>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>  
+        <org.osgi.core.version>5.0.0</org.osgi.core.version>
+        <org.osgi.enterprise.version>5.0.0</org.osgi.enterprise.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <version>${org.osgi.core.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.enterprise</artifactId>
+            <version>${org.osgi.enterprise.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 </project>

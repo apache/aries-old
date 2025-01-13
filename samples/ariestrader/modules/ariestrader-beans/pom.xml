@@ -32,15 +32,15 @@
 
 
     <properties>
-         <!-- Export package versions handled with packageinfo. Override settings in default parent which cause build warnings -->
-         <aries.osgi.export>
-               org.apache.aries.samples.ariestrader.beans
-         </aries.osgi.export>
-         <aries.osgi.import>
-           org.apache.aries.samples.ariestrader.api.persistence;provide:=true,
-           *
-         </aries.osgi.import>
-         <aries.osgi.private.pkg />
+        <!-- Export package versions handled with packageinfo. Override settings in default parent which cause build warnings -->
+        <aries.osgi.export>
+            org.apache.aries.samples.ariestrader.beans
+        </aries.osgi.export>
+        <aries.osgi.import>
+            org.apache.aries.samples.ariestrader.api.persistence;provide:=true,
+            *
+        </aries.osgi.import>
+        <aries.osgi.private.pkg/>
     </properties>
 
     <dependencies>

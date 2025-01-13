@@ -32,7 +32,6 @@
 
     <dependencyManagement>
         <dependencies>
-
             <dependency>
                 <groupId>org.apache.aries.samples.blueprint.idverifier</groupId>
                 <artifactId>org.apache.aries.samples.blueprint.idverifier.api</artifactId>
@@ -54,7 +53,6 @@
                 <artifactId>org.apache.aries.samples.blueprint.idverifier.server</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            
         </dependencies>
     </dependencyManagement>
 

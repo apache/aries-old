@@ -58,7 +58,7 @@
                         </Import-Package>
                         <!-- Sets Bundle-Classpath to WEB-INF/classes -->
                         <_wab>src/main/webapp/</_wab>
-                   </instructions>
+                    </instructions>
                 </configuration>
             </plugin>
         </plugins>

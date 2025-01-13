@@ -26,7 +26,7 @@
         <artifactId>parent</artifactId>
         <version>2.0.1</version>
         <relativePath>../../parent/pom.xml</relativePath>
-    </parent>  
+    </parent>
 
     <groupId>org.apache.aries.jmx</groupId>
     <artifactId>org.apache.aries.jmx.core.whiteboard</artifactId>
@@ -51,10 +51,10 @@
         </aries.osgi.activator>
         <!-- Export package versions are maintained in packageinfo files -->
         <aries.osgi.export.pkg>
-          org.apache.aries.jmx.codec
+            org.apache.aries.jmx.codec
         </aries.osgi.export.pkg>
         <aries.osgi.private.pkg>
-          org.apache.aries.jmx*
+            org.apache.aries.jmx*
         </aries.osgi.private.pkg>
         <aries.osgi.dynamic>
             org.osgi.jmx.service.cm;version="[1.3,2)",
@@ -67,18 +67,23 @@
             org.osgi.service.useradmin;version="[1.1,2)"
         </aries.osgi.dynamic>
         <lastReleaseVersion>1.1.1</lastReleaseVersion>
+
+        <mockito-all.version>1.8.2</mockito-all.version>
+        <org.apache.aries.jmx.api.version>1.1.5</org.apache.aries.jmx.api.version>
+        <org.apache.aries.jmx.core.version>1.1.8</org.apache.aries.jmx.core.version>
+        <org.apache.aries.util.version>1.1.1</org.apache.aries.util.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.aries.jmx</groupId>
             <artifactId>org.apache.aries.jmx.api</artifactId>
-            <version>1.1.5</version>
+            <version>${org.apache.aries.jmx.api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.jmx</groupId>
             <artifactId>org.apache.aries.jmx.core</artifactId>
-            <version>1.1.8</version>
+            <version>${org.apache.aries.jmx.core.version}</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
@@ -93,21 +98,21 @@
         <dependency>
             <groupId>org.apache.aries</groupId>
             <artifactId>org.apache.aries.util</artifactId>
-            <version>1.1.1</version>
+            <version>${org.apache.aries.util.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-all</artifactId>
             <scope>test</scope>
-            <version>1.8.2</version>
+            <version>${mockito-all.version}</version>
         </dependency>
         <dependency>
-             <groupId>junit</groupId>
-             <artifactId>junit</artifactId>
-             <scope>test</scope>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>
@@ -126,4 +131,4 @@
         </plugins>
     </build>
 
- </project>
+</project>

@@ -26,7 +26,7 @@
         <artifactId>parent</artifactId>
         <version>2.0.1</version>
         <relativePath>../../parent/pom.xml</relativePath>
-    </parent>  
+    </parent>
 
     <groupId>org.apache.aries.jmx</groupId>
     <artifactId>org.apache.aries.jmx.blueprint.core</artifactId>
@@ -52,18 +52,22 @@
             javax.management.MBeanServer
         </aries.osgi.import.service>
         <lastReleaseVersion>1.1.0</lastReleaseVersion>
+
+        <jmock.version>2.5.1</jmock.version>
+        <org.apache.aries.jmx.blueprint.api.version>1.2.0</org.apache.aries.jmx.blueprint.api.version>
+        <org.apache.aries.util.version>1.1.1</org.apache.aries.util.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.aries.jmx</groupId>
             <artifactId>org.apache.aries.jmx.blueprint.api</artifactId>
-            <version>1.2.0</version>
+            <version>${org.apache.aries.jmx.blueprint.api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries</groupId>
             <artifactId>org.apache.aries.util</artifactId>
-            <version>1.1.1</version>
+            <version>${org.apache.aries.util.version}</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
@@ -93,13 +97,13 @@
         <dependency>
             <groupId>org.jmock</groupId>
             <artifactId>jmock-junit4</artifactId>
-            <version>2.5.1</version>
+            <version>${jmock.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.jmock</groupId>
             <artifactId>jmock-legacy</artifactId>
-            <version>2.5.1</version>
+            <version>${jmock.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

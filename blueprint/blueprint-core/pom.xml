@@ -42,8 +42,8 @@
         <connection>scm:git:http://gitbox.apache.org/repos/asf/aries.git</connection>
         <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/aries.git</developerConnection>
         <url>https://gitbox.apache.org/repos/asf?p=aries.git</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <properties>
         <rat.excludesFile>${project.basedir}/rat-excludes.txt</rat.excludesFile>
@@ -93,14 +93,20 @@
             {maven-resources},
             org/apache/aries/blueprint/blueprint.xsd=${project.build.directory}/sources/org/osgi/service/blueprint/blueprint.xsd
         </aries.osgi.include.resource>
+        <lastReleaseVersion>1.6.0</lastReleaseVersion>
+
+        <asm-debug-all.version>5.0.3</asm-debug-all.version>
         <blueprint.annotation.api.version>1.0.1</blueprint.annotation.api.version>
         <blueprint.api.version>1.0.1</blueprint.api.version>
         <blueprint.parser.version>1.6.0</blueprint.parser.version>
+        <easymock.version>4.2</easymock.version>
+        <maven-release-plugin.version>2.5.2</maven-release-plugin.version>
+        <org.apache.aries.versioning.plugin.version>0.3.1</org.apache.aries.versioning.plugin.version>
+        <org.apache.felix.utils.version>1.11.6</org.apache.felix.utils.version>
         <proxy.api.version>1.1.1</proxy.api.version>
         <proxy.impl.version>1.1.9</proxy.impl.version>
         <quiesce.api.version>1.0.0</quiesce.api.version>
         <util.version>1.1.3</util.version>
-        <lastReleaseVersion>1.6.0</lastReleaseVersion>
     </properties>
 
     <profiles>
@@ -163,7 +169,7 @@
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.utils</artifactId>
-            <version>1.11.6</version>
+            <version>${org.apache.felix.utils.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -175,7 +181,7 @@
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm-debug-all</artifactId>
             <optional>true</optional>
-            <version>5.0.3</version>
+            <version>${asm-debug-all.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.quiesce</groupId>
@@ -185,7 +191,7 @@
         <dependency>
             <groupId>org.easymock</groupId>
             <artifactId>easymock</artifactId>
-            <version>4.2</version>
+            <version>${easymock.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -242,15 +248,15 @@
                     </execution>
                 </executions>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.apache.aries.versioning</groupId>
                 <artifactId>org.apache.aries.versioning.plugin</artifactId>
-                <version>0.3.1</version>
+                <version>${org.apache.aries.versioning.plugin.version}</version>
                 <configuration>
                     <excludes>
-                      <exclude>method org.apache.aries.blueprint.di.Repository getRepository() has been deleted</exclude>
-                      <exclude>class org/apache/aries/blueprint/ext/PropertyPlaceholder was not abstract but is changed to be abstract</exclude>
+                        <exclude>method org.apache.aries.blueprint.di.Repository getRepository() has been deleted</exclude>
+                        <exclude>class org/apache/aries/blueprint/ext/PropertyPlaceholder was not abstract but is changed to be abstract</exclude>
                     </excludes>
                 </configuration>
                 <executions>
@@ -276,23 +282,23 @@
                             version:Version="1.0"
                         </Provide-Capability>
                         <Require-Capability>
-                        	osgi.service;filter:="(objectClass=org.apache.aries.proxy.ProxyManager)";effective:="active"
+                            osgi.service;filter:="(objectClass=org.apache.aries.proxy.ProxyManager)";effective:="active"
                         </Require-Capability>
                     </instructions>
                 </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.2</version>
+                <version>${maven-release-plugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                 <artifactId>maven-javadoc-plugin</artifactId>
-                 <configuration>
-                     <additionalparam>-Xdoclint:none</additionalparam>
-                 </configuration>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <additionalparam>-Xdoclint:none</additionalparam>
+                </configuration>
             </plugin>
         </plugins>
     </build>
-        
+
 </project>

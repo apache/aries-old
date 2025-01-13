@@ -16,7 +16,7 @@
     limitations under the License.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    
+
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.apache.aries.samples</groupId>
@@ -28,7 +28,11 @@
     <artifactId>blog</artifactId>
     <name>Apache Aries blog sample</name>
     <packaging>pom</packaging>
-    
+
+    <properties>
+        <org.eclipse.osgi.version>3.7.0.v20110613</org.eclipse.osgi.version>
+    </properties>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -68,7 +72,7 @@
                 <artifactId>org.apache.aries.samples.blog.persistence.jdbc</artifactId>
                 <version>${project.version}</version>
             </dependency>
-             <dependency>
+            <dependency>
                 <groupId>org.apache.aries.samples.blog</groupId>
                 <artifactId>org.apache.aries.samples.blog.persistence.jpa</artifactId>
                 <version>${project.version}</version>
@@ -78,11 +82,11 @@
                 <artifactId>org.apache.aries.samples.blog.web</artifactId>
                 <version>${project.version}</version>
             </dependency>
-<!-- Override the version of OSGi used in samples, so we can show off weaving (different group id too, unfortunately) -->
+            <!-- Override the version of OSGi used in samples, so we can show off weaving (different group id too, unfortunately) -->
             <dependency>
                 <groupId>org.eclipse.tycho</groupId>
                 <artifactId>org.eclipse.osgi</artifactId>
-                <version>3.7.0.v20110613</version>
+                <version>${org.eclipse.osgi.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

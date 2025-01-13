@@ -34,8 +34,8 @@
     <name>Apache Aries Application Bundle</name>
     <version>1.0.1-SNAPSHOT</version>
     <description>
-      This bundle is a standalone bundle to support
-      Aries applications.
+        This bundle is a standalone bundle to support
+        Aries applications.
     </description>
 
     <scm>
@@ -68,28 +68,33 @@
             OSGI-INF*
         </aries.osgi.private.pkg>
         <lastReleaseVersion>1.0.0</lastReleaseVersion>
+
+        <org.apache.aries.application.api.version>1.0.0</org.apache.aries.application.api.version>
+        <org.apache.aries.application.management.version>1.0.0</org.apache.aries.application.management.version>
+        <org.apache.aries.application.runtime.version>1.0.0</org.apache.aries.application.runtime.version>
+        <org.apache.aries.application.utils.version>1.0.0</org.apache.aries.application.utils.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.api</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.management</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.management.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.runtime</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.runtime.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.utils</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.utils.version}</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
@@ -107,7 +112,7 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <!-- Use the shade plugin with the dependency plugin to unjar the three jars (api, core and cm)
@@ -132,7 +137,7 @@
                                 </includes>
                             </artifactSet>
                             <filters>
-                                 <filter>
+                                <filter>
                                     <artifact>org.apache.aries.application:org.apache.aries.application.api</artifact>
                                     <excludes>
                                         <exclude>org/**</exclude>

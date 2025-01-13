@@ -52,6 +52,11 @@
             org.apache.aries.subsystem.obr.internal
         </aries.osgi.private.pkg>
         <lastReleaseVersion>1.0.0</lastReleaseVersion>
+
+        <org.apache.aries.application.utils.version>1.0.0</org.apache.aries.application.utils.version>
+        <org.apache.felix.bundlerepository.version>1.6.4</org.apache.felix.bundlerepository.version>
+        <org.osgi.core.version>5.0.0</org.osgi.core.version>
+        <org.osgi.enterprise.version>5.0.0</org.osgi.enterprise.version>
     </properties>
 
     <dependencies>
@@ -63,22 +68,22 @@
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.utils</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.utils.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.bundlerepository</artifactId>
-            <version>1.6.4</version>
+            <version>${org.apache.felix.bundlerepository.version}</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.core</artifactId>
-            <version>5.0.0</version>
+            <version>${org.osgi.core.version}</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.enterprise</artifactId>
-            <version>5.0.0</version>
+            <version>${org.osgi.enterprise.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>

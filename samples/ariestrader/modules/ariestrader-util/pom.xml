@@ -32,11 +32,11 @@
 
 
     <properties>
-         <!-- Export versions handled with packageinfo files. Override settings in default parent which cause build warnings -->
-         <aries.osgi.export>
-             org.apache.aries.samples.ariestrader.util
-         </aries.osgi.export>
-         <aries.osgi.private.pkg />
+        <!-- Export versions handled with packageinfo files. Override settings in default parent which cause build warnings -->
+        <aries.osgi.export>
+            org.apache.aries.samples.ariestrader.util
+        </aries.osgi.export>
+        <aries.osgi.private.pkg/>
     </properties>
 
     <dependencies>

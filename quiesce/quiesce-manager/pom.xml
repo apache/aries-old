@@ -55,6 +55,9 @@
             org.apache.aries.quiesce.manager.QuiesceManager
         </aries.osgi.export.service>
         <lastReleaseVersion>1.0.0</lastReleaseVersion>
+
+        <org.apache.aries.quiesce.api.version>1.0.0</org.apache.aries.quiesce.api.version>
+        <org.apache.aries.util.version>1.0.0</org.apache.aries.util.version>
     </properties>
 
     <dependencies>
@@ -66,12 +69,12 @@
         <dependency>
             <groupId>org.apache.aries.quiesce</groupId>
             <artifactId>org.apache.aries.quiesce.api</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.quiesce.api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries</groupId>
             <artifactId>org.apache.aries.util</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.util.version}</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>

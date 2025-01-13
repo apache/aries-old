@@ -51,9 +51,11 @@
             org.apache.aries.blueprint.annotation;provide:=true,
             *
         </aries.osgi.import>
-        <aries.osgi.private.pkg />
+        <aries.osgi.private.pkg/>
 
         <blueprint.api.version>1.0.1</blueprint.api.version>
+        <org.apache.aries.blueprint.annotation.api.version>1.0.0</org.apache.aries.blueprint.annotation.api.version>
+        <osgi.version>3.5.0.v20090520</osgi.version>
     </properties>
 
     <profiles>
@@ -69,7 +71,7 @@
         <dependency>
             <groupId>org.eclipse</groupId>
             <artifactId>osgi</artifactId>
-            <version>3.5.0.v20090520</version>
+            <version>${osgi.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -80,7 +82,7 @@
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
             <artifactId>org.apache.aries.blueprint.annotation.api</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.blueprint.annotation.api.version}</version>
         </dependency>
     </dependencies>
 

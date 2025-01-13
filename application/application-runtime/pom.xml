@@ -43,15 +43,18 @@
         <url>https://gitbox.apache.org/repos/asf?p=aries.git;a=summary</url>
     </scm>
 
-     <properties>
-        <aries.osgi.export.pkg />
+    <properties>
+        <aries.osgi.export.pkg/>
         <aries.osgi.import.pkg>
             org.apache.aries.application.management;provide:=true,
             org.apache.aries.application.management.spi.runtime;provide:=true,
             *
         </aries.osgi.import.pkg>
         <lastReleaseVersion>1.0.0</lastReleaseVersion>
-     </properties>
+
+        <org.apache.aries.application.utils.version>1.0.0</org.apache.aries.application.utils.version>
+        <org.apache.aries.testsupport.unit.version>1.0.0</org.apache.aries.testsupport.unit.version>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -62,13 +65,13 @@
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.utils</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.utils.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.testsupport</groupId>
             <artifactId>org.apache.aries.testsupport.unit</artifactId>
             <scope>test</scope>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.testsupport.unit.version}</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
@@ -110,4 +113,4 @@
         </plugins>
     </build>
 
- </project>
+</project>

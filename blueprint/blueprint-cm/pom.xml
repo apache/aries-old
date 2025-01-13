@@ -41,25 +41,34 @@
         <connection>scm:git:https://gitbox.apache.org/repos/asf/aries.git</connection>
         <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/aries.git</developerConnection>
         <url>https://gitbox.apache.org/repos/asf?p=aries.git;a=summary</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <properties>
         <!-- Export package versions are maintained in packageinfo files -->
-        <aries.osgi.export.pkg />
+        <aries.osgi.export.pkg/>
         <aries.osgi.import.pkg>
-           org.apache.aries.blueprint;provide:=true;version="[1.0,2.0)",
-           org.apache.aries.blueprint.ext;provide:=true;version="[1.0,2.0)",
-           *
+            org.apache.aries.blueprint;provide:=true;version="[1.0,2.0)",
+            org.apache.aries.blueprint.ext;provide:=true;version="[1.0,2.0)",
+            *
         </aries.osgi.import.pkg>
         <aries.osgi.private.pkg>
             org.apache.aries.blueprint.compendium.cm
         </aries.osgi.private.pkg>
+        <lastReleaseVersion>1.1.0</lastReleaseVersion>
 
         <blueprint.api.version>1.0.1</blueprint.api.version>
         <blueprint.core.version>1.10.3</blueprint.core.version>
         <blueprint.parser.version>1.6.0</blueprint.parser.version>
-        <lastReleaseVersion>1.1.0</lastReleaseVersion>
+        <de.kalpatec.pojosr.framework.version>0.1.6</de.kalpatec.pojosr.framework.version>
+        <jcl-over-slf4j.version>1.7.5</jcl-over-slf4j.version>
+        <maven-release-plugin.version>2.5.2</maven-release-plugin.version>
+        <org.apache.aries.blueprint.core.version>1.10.0</org.apache.aries.blueprint.core.version>
+        <org.apache.aries.proxy.version>1.1.0</org.apache.aries.proxy.version>
+        <org.apache.felix.configadmin.version>1.2.8</org.apache.felix.configadmin.version>
+        <org.osgi.compendium.version>4.1.0</org.osgi.compendium.version>
+        <pax-swissbox-tinybundles.version>1.3.1</pax-swissbox-tinybundles.version>
+        <slf4j-log4j12.version>1.7.5</slf4j-log4j12.version>
     </properties>
 
     <profiles>
@@ -89,18 +98,18 @@
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
             <artifactId>blueprint-parser</artifactId>
-            <version>1.6.0</version>
+            <version>${blueprint.parser.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
             <artifactId>org.apache.aries.blueprint.core</artifactId>
-            <version>1.10.0</version>
+            <version>${org.apache.aries.blueprint.core.version}</version>
             <exclusions>
-            	<exclusion>
-            		<groupId>org.apache.aries</groupId>
-            		<artifactId>org.apache.aries.util</artifactId>
-            	</exclusion>
+                <exclusion>
+                    <groupId>org.apache.aries</groupId>
+                    <artifactId>org.apache.aries.util</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
@@ -112,7 +121,7 @@
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.compendium</artifactId>
             <scope>provided</scope>
-            <version>4.1.0</version>
+            <version>${org.osgi.compendium.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -123,13 +132,13 @@
         <dependency>
             <groupId>com.googlecode.pojosr</groupId>
             <artifactId>de.kalpatec.pojosr.framework</artifactId>
-            <version>0.1.6</version>
+            <version>${de.kalpatec.pojosr.framework.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.swissbox</groupId>
             <artifactId>pax-swissbox-tinybundles</artifactId>
-            <version>1.3.1</version>
+            <version>${pax-swissbox-tinybundles.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -140,25 +149,25 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.5</version>
+            <version>${slf4j-log4j12.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
-            <version>1.7.5</version>
+            <version>${jcl-over-slf4j.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.proxy</groupId>
             <artifactId>org.apache.aries.proxy</artifactId>
-            <version>1.1.0</version>
+            <version>${org.apache.aries.proxy.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.configadmin</artifactId>
-            <version>1.2.8</version>
+            <version>${org.apache.felix.configadmin.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -180,7 +189,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.2</version>
+                <version>${maven-release-plugin.version}</version>
             </plugin>
         </plugins>
     </build>

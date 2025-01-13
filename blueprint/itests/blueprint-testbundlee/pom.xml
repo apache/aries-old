@@ -35,21 +35,23 @@
     <description>Blueprint Test Bundle E, provides Spring Extender test</description>
 
     <properties>
-        <aries.osgi.private.pkg />
+        <aries.osgi.private.pkg/>
         <aries.osgi.export.pkg>${project.artifactId}*</aries.osgi.export.pkg>
+
+        <spring.version>4.2.2.RELEASE</spring.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.2.2.RELEASE</version>
+            <version>${spring.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>4.2.2.RELEASE</version>
+            <version>${spring.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

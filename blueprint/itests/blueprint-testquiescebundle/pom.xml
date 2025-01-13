@@ -42,7 +42,7 @@
             org.osgi.framework,
             org.osgi.service.blueprint
         </aries.osgi.import.pkg>
-        <aries.osgi.private.pkg />
+        <aries.osgi.private.pkg/>
         <aries.osgi.export.pkg>${project.artifactId}*</aries.osgi.export.pkg>
     </properties>
 

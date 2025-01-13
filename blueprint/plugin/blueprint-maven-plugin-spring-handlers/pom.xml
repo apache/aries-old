@@ -38,21 +38,27 @@
         <url>https://gitbox.apache.org/repos/asf?p=aries.git;a=summary</url>
     </scm>
 
+    <properties>
+        <java.target.version>1.7</java.target.version>
+        <java.source.version>1.7</java.source.version>
+
+        <blueprint-maven-plugin-spi.version>1.0.0</blueprint-maven-plugin-spi.version>
+        <commons-lang.version>2.6</commons-lang.version>
+        <guava.version>19.0</guava.version>
+        <spring.version>3.1.4.RELEASE</spring.version>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <target>1.7</target>
-                    <source>1.7</source>
+                    <target>${java.target.version}</target>
+                    <source>${java.source.version}</source>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
-    <properties>
-        <blueprint-maven-plugin-spi.version>1.0.0</blueprint-maven-plugin-spi.version>
-    </properties>
 
     <profiles>
         <profile>
@@ -73,7 +79,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>3.1.4.RELEASE</version>
+            <version>${spring.version}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>spring-aop</artifactId>
@@ -96,18 +102,18 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>3.1.4.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
 
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
-            <version>2.6</version>
+            <version>${commons-lang.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>19.0</version>
+            <version>${guava.version}</version>
         </dependency>
     </dependencies>
 

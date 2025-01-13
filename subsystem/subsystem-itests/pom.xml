@@ -38,28 +38,53 @@
     </description>
 
     <properties>
+        <asm.version>5.0.3</asm.version>
+        <build-helper-maven-plugin.version>1.5</build-helper-maven-plugin.version>
+        <easymock.version>3.0</easymock.version>
         <exam.version>3.4.0</exam.version>
-        <url.version>2.5.3</url.version>
         <logback.version>1.5.16</logback.version>
+        <maven-jar-plugin.version>2.3</maven-jar-plugin.version>
+        <org.apache.aries.application.api.version>1.0.0</org.apache.aries.application.api.version>
+        <org.apache.aries.application.modeller.version>1.0.0</org.apache.aries.application.modeller.version>
+        <org.apache.aries.application.utils.version>1.0.0</org.apache.aries.application.utils.version>
+        <org.apache.aries.blueprint.version>1.0.0</org.apache.aries.blueprint.version>
+        <org.apache.aries.proxy.version>1.0.1</org.apache.aries.proxy.version>
+        <org.apache.aries.subsystem.api.version>2.0.11-SNAPSHOT</org.apache.aries.subsystem.api.version>
+        <org.apache.aries.subsystem.core.version>2.0.11-SNAPSHOT</org.apache.aries.subsystem.core.version>
+        <org.apache.aries.subsystem.itest.interfaces.version>1.0.0-SNAPSHOT</org.apache.aries.subsystem.itest.interfaces.version>
+        <org.apache.aries.subsystem.obr.version>1.0.5-SNAPSHOT</org.apache.aries.subsystem.obr.version>
+        <org.apache.aries.testsupport.unit.version>2.0.0-SNAPSHOT</org.apache.aries.testsupport.unit.version>
+        <org.apache.aries.util.version>1.1.0</org.apache.aries.util.version>
+        <org.apache.felix.bundlerepository.version>1.6.6</org.apache.felix.bundlerepository.version>
+        <org.apache.felix.configadmin.version>1.8.0</org.apache.felix.configadmin.version>
+        <org.eclipse.equinox.event.version>1.2.200.v20120522-2049</org.eclipse.equinox.event.version>
+        <org.eclipse.osgi.version>3.10.0.v20140606-1445</org.eclipse.osgi.version>
+        <org.osgi.service.obr.version>1.0.2</org.osgi.service.obr.version>
+        <osgi.cmpn.version>6.0.0</osgi.cmpn.version>
+        <osgi.core.version>6.0.0</osgi.core.version>
+        <osgi.enterprise.version>6.0.0</osgi.enterprise.version>
+        <slf4j-api.version>1.7.7</slf4j-api.version>
+        <tinybundles.version>2.0.0</tinybundles.version>
+        <url.version>2.5.3</url.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>osgi.core</artifactId>
-            <version>6.0.0</version>
+            <version>${osgi.core.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>osgi.cmpn</artifactId>
-            <version>6.0.0</version>
+            <version>${osgi.cmpn.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>osgi.enterprise</artifactId>
-            <version>6.0.0</version>
+            <version>${osgi.enterprise.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -71,7 +96,7 @@
             <groupId>org.apache.aries</groupId>
             <artifactId>org.apache.aries.util</artifactId>
             <scope>test</scope>
-            <version>1.1.0</version>
+            <version>${org.apache.aries.util.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.osgi</groupId>
@@ -83,7 +108,7 @@
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.api</artifactId>
             <scope>test</scope>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.api.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.osgi</groupId>
@@ -94,7 +119,7 @@
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.modeller</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.modeller.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.osgi</groupId>
@@ -106,7 +131,7 @@
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.utils</artifactId>
             <scope>test</scope>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.application.utils.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.osgi</groupId>
@@ -117,20 +142,20 @@
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
             <artifactId>org.apache.aries.blueprint</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.blueprint.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.proxy</groupId>
             <artifactId>org.apache.aries.proxy</artifactId>
-            <version>1.0.1</version>
+            <version>${org.apache.aries.proxy.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.subsystem</groupId>
             <artifactId>org.apache.aries.subsystem.api</artifactId>
             <scope>test</scope>
-            <version>2.0.11-SNAPSHOT</version>
+            <version>${org.apache.aries.subsystem.api.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.osgi</groupId>
@@ -142,7 +167,7 @@
             <groupId>org.apache.aries.subsystem</groupId>
             <artifactId>org.apache.aries.subsystem.core</artifactId>
             <scope>test</scope>
-            <version>2.0.11-SNAPSHOT</version>
+            <version>${org.apache.aries.subsystem.core.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.osgi</groupId>
@@ -154,7 +179,7 @@
             <groupId>org.apache.aries.subsystem</groupId>
             <artifactId>org.apache.aries.subsystem.obr</artifactId>
             <scope>test</scope>
-            <version>1.0.5-SNAPSHOT</version>
+            <version>${org.apache.aries.subsystem.obr.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.osgi</groupId>
@@ -165,20 +190,20 @@
         <dependency>
             <groupId>org.apache.aries.subsystem</groupId>
             <artifactId>org.apache.aries.subsystem.itest.interfaces</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${org.apache.aries.subsystem.itest.interfaces.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.testsupport</groupId>
             <artifactId>org.apache.aries.testsupport.unit</artifactId>
             <scope>test</scope>
-            <version>2.0.0-SNAPSHOT</version>
+            <version>${org.apache.aries.testsupport.unit.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.bundlerepository</artifactId>
             <scope>test</scope>
-            <version>1.6.6</version>
+            <version>${org.apache.felix.bundlerepository.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.osgi</groupId>
@@ -194,7 +219,7 @@
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.configadmin</artifactId>
             <scope>test</scope>
-            <version>1.8.0</version>
+            <version>${org.apache.felix.configadmin.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.osgi</groupId>
@@ -214,7 +239,7 @@
             <groupId>org.apache.felix</groupId>
             <artifactId>org.osgi.service.obr</artifactId>
             <scope>test</scope>
-            <version>1.0.2</version>
+            <version>${org.osgi.service.obr.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.osgi</groupId>
@@ -233,20 +258,20 @@
         <dependency>
             <groupId>org.easymock</groupId>
             <artifactId>easymock</artifactId>
-            <version>3.0</version>
+            <version>${easymock.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.eclipse.equinox</groupId>
             <artifactId>org.eclipse.equinox.event</artifactId>
             <scope>test</scope>
-            <version>1.2.200.v20120522-2049</version>
+            <version>${org.eclipse.equinox.event.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm-all</artifactId>
-            <version>5.0.3</version>
+            <version>${asm.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -254,7 +279,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.7</version>
+            <version>${slf4j-api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.exam</groupId>
@@ -301,7 +326,7 @@
         <dependency>
             <groupId>org.ops4j.pax.tinybundles</groupId>
             <artifactId>tinybundles</artifactId>
-            <version>2.0.0</version>
+            <version>${tinybundles.version}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>org.osgi.core</artifactId>
@@ -312,7 +337,7 @@
         <dependency>
             <groupId>org.eclipse.tycho</groupId>
             <artifactId>org.eclipse.osgi</artifactId>
-            <version>3.10.0.v20140606-1445</version>
+            <version>${org.eclipse.osgi.version}</version>
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.logging</groupId>
@@ -331,9 +356,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.3</version>
+                <version>${maven-jar-plugin.version}</version>
                 <executions>
-                     <execution>
+                    <execution>
                         <id>tb1-nobsn</id>
                         <goals>
                             <goal>jar</goal>
@@ -653,7 +678,7 @@
                         </configuration>
                         <phase>process-test-classes</phase>
                     </execution>
-                    
+
                     <execution>
                         <id>aries1523fragment</id>
                         <goals>
@@ -678,7 +703,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
-                <version>1.5</version>
+                <version>${build-helper-maven-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>add-source-tb1</id>
@@ -809,7 +834,7 @@
                             </sources>
                         </configuration>
                     </execution>
-                    
+
                     <execution>
                         <id>add-source-aries1523fragment</id>
                         <phase>generate-sources</phase>

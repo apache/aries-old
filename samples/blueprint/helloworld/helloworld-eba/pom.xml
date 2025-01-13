@@ -36,18 +36,18 @@ under the License.
     <packaging>eba</packaging>
 
     <dependencies>
-    	<dependency>
-    		<groupId>org.apache.aries.samples.blueprint.helloworld</groupId>
-    		<artifactId>org.apache.aries.samples.blueprint.helloworld.api</artifactId>
-    	</dependency>
-    	<dependency>
-    		<groupId>org.apache.aries.samples.blueprint.helloworld</groupId>
-    		<artifactId>org.apache.aries.samples.blueprint.helloworld.client</artifactId>
-    	</dependency>
-    	<dependency>
-    		<groupId>org.apache.aries.samples.blueprint.helloworld</groupId>
-    		<artifactId>org.apache.aries.samples.blueprint.helloworld.server</artifactId>
-    	</dependency>
+        <dependency>
+            <groupId>org.apache.aries.samples.blueprint.helloworld</groupId>
+            <artifactId>org.apache.aries.samples.blueprint.helloworld.api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.aries.samples.blueprint.helloworld</groupId>
+            <artifactId>org.apache.aries.samples.blueprint.helloworld.client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.aries.samples.blueprint.helloworld</groupId>
+            <artifactId>org.apache.aries.samples.blueprint.helloworld.server</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

@@ -34,10 +34,12 @@
     <name>Apache Aries Blueprint Maven Plugin Pax Cdi Handlers</name>
 
     <properties>
-        <pax-cdi-api.version>0.8.0</pax-cdi-api.version>
-        <guava.version>19.0</guava.version>
+        <java.target.version>1.7</java.target.version>
+        <java.source.version>1.7</java.source.version>
 
         <blueprint-maven-plugin-spi.version>1.0.0</blueprint-maven-plugin-spi.version>
+        <guava.version>19.0</guava.version>
+        <pax-cdi-api.version>0.8.0</pax-cdi-api.version>
     </properties>
 
     <profiles>
@@ -60,8 +62,8 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <target>1.7</target>
-                    <source>1.7</source>
+                    <target>${java.target.version}</target>
+                    <source>${java.source.version}</source>
                 </configuration>
             </plugin>
         </plugins>

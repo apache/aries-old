@@ -23,7 +23,7 @@
         <groupId>org.apache.aries.samples.twitter</groupId>
         <version>1.0.1-SNAPSHOT</version>
     </parent>
-    
+
     <modelVersion>4.0.0</modelVersion>
     <artifactId>org.apache.aries.samples.twitter.itests</artifactId>
     <packaging>jar</packaging>
@@ -31,40 +31,46 @@
     <description>
         Integration tests for the Twitter sample
     </description>
-    
+
     <properties>
+        <asm.version>4.0</asm.version>
+        <depends-maven-plugin.version>1.2</depends-maven-plugin.version>
         <exam.version>3.4.0</exam.version>
-        <url.version>1.6.0</url.version>
+        <logback.version>0.9.29</logback.version>
+        <org.apache.aries.testsupport.unit.version>2.0.0-SNAPSHOT</org.apache.aries.testsupport.unit.version>
+        <org.eclipse.osgi.version>3.8.0.v20120529-1548</org.eclipse.osgi.version>
         <swissbox.version>1.7.0</swissbox.version>
+        <tinybundles.version>2.0.0</tinybundles.version>
+        <url.version>1.6.0</url.version>
     </properties>
-    
+
     <dependencies>
-  		<dependency>
+        <dependency>
             <groupId>org.eclipse</groupId>
             <artifactId>org.eclipse.osgi</artifactId>
-            <version>3.8.0.v20120529-1548</version>
+            <version>${org.eclipse.osgi.version}</version>
         </dependency>
-		<dependency>
-			<groupId>org.apache.aries</groupId>
-			<artifactId>org.apache.aries.util</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.aries.blueprint</groupId>
-			<artifactId>org.apache.aries.blueprint</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.aries.proxy</groupId>
-			<artifactId>org.apache.aries.proxy</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			 <groupId>org.ow2.asm</groupId>
+        <dependency>
+            <groupId>org.apache.aries</groupId>
+            <artifactId>org.apache.aries.util</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.aries.blueprint</groupId>
+            <artifactId>org.apache.aries.blueprint</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.aries.proxy</groupId>
+            <artifactId>org.apache.aries.proxy</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
             <artifactId>asm-all</artifactId>
-            <version>4.0</version>
-			<scope>test</scope>
-		</dependency>
+            <version>${asm.version}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.bundlerepository</artifactId>
@@ -74,7 +80,7 @@
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.compendium</artifactId>
             <scope>test</scope>
-        </dependency>       
+        </dependency>
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>org.apache.aries.application.utils</artifactId>
@@ -83,7 +89,7 @@
         <dependency>
             <groupId>org.apache.aries.testsupport</groupId>
             <artifactId>org.apache.aries.testsupport.unit</artifactId>
-            <version>2.0.0-SNAPSHOT</version>
+            <version>${org.apache.aries.testsupport.unit.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -98,29 +104,29 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-        	<groupId>org.apache.aries.application</groupId>
-        	<artifactId>org.apache.aries.application.runtime.framework</artifactId>
-        	<scope>test</scope>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.runtime.framework</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
-        	<groupId>org.apache.aries.application</groupId>
-        	<artifactId>org.apache.aries.application.runtime.framework.management</artifactId>
-        	<scope>test</scope>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.runtime.framework.management</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
-        	<groupId>org.apache.aries.application</groupId>
-        	<artifactId>org.apache.aries.application.runtime.repository</artifactId>
-        	<scope>test</scope>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.runtime.repository</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
-        	<groupId>org.apache.aries.application</groupId>
-        	<artifactId>org.apache.aries.application.runtime.isolated</artifactId>
-        	<scope>test</scope>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.runtime.isolated</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
-        	<groupId>org.apache.aries.application</groupId>
-        	<artifactId>org.apache.aries.application.runtime</artifactId>
-        	<scope>test</scope>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.runtime</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.application</groupId>
@@ -133,41 +139,41 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-             <groupId>org.apache.aries.application</groupId>
-             <artifactId>org.apache.aries.application.default.local.platform</artifactId>
-             <scope>test</scope>
+            <groupId>org.apache.aries.application</groupId>
+            <artifactId>org.apache.aries.application.default.local.platform</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
-        	<groupId>org.apache.aries.transaction</groupId>
-        	<artifactId>org.apache.aries.transaction.blueprint</artifactId>
-        	<scope>test</scope>
+            <groupId>org.apache.aries.transaction</groupId>
+            <artifactId>org.apache.aries.transaction.blueprint</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
-        	<groupId>org.apache.geronimo.specs</groupId>
-        	<artifactId>geronimo-jta_1.1_spec</artifactId>
-        	<scope>test</scope>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jta_1.1_spec</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
-          <groupId>org.apache.aries.samples.twitter</groupId>
-          <artifactId>org.apache.aries.samples.twitter.eba</artifactId>
-          <scope>test</scope>
-          <type>eba</type>
+            <groupId>org.apache.aries.samples.twitter</groupId>
+            <artifactId>org.apache.aries.samples.twitter.eba</artifactId>
+            <scope>test</scope>
+            <type>eba</type>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.samples.twitter</groupId>
             <artifactId>org.apache.aries.samples.twitter.twitter4j</artifactId>
             <exclusions>
-            	<exclusion>
-            		<artifactId>nlog4j</artifactId>
-            		<groupId>org.slf4j</groupId>
-            	</exclusion>
+                <exclusion>
+                    <artifactId>nlog4j</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.samples.twitter</groupId>
             <artifactId>org.apache.aries.samples.twitter.bundle</artifactId>
         </dependency>
-        
+
         <!-- pax exam -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -206,19 +212,19 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
-            <version>0.9.29</version>
+            <version>${logback.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>0.9.29</version>
+            <version>${logback.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.ops4j.pax.tinybundles</groupId>
             <artifactId>tinybundles</artifactId>
-            <version>2.0.0</version>
+            <version>${tinybundles.version}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>org.osgi.core</artifactId>
@@ -235,10 +241,10 @@
 
     <build>
         <plugins>
-			<plugin>
+            <plugin>
                 <groupId>org.apache.servicemix.tooling</groupId>
                 <artifactId>depends-maven-plugin</artifactId>
-                <version>1.2</version>
+                <version>${depends-maven-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>generate-depends-file</id>

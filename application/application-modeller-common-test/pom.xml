@@ -34,7 +34,7 @@
     <name>Apache Aries Application Modelling tests</name>
     <version>1.0.1-SNAPSHOT</version>
     <description>
-      Modelling utilities for working with Aries Applications (distribution for offline use).
+        Modelling utilities for working with Aries Applications (distribution for offline use).
     </description>
 
     <scm>
@@ -43,11 +43,19 @@
         <url>https://gitbox.apache.org/repos/asf?p=aries.git;a=summary</url>
     </scm>
 
+    <properties>
+        <application-modeller-standalone.version>1.0.0</application-modeller-standalone.version>
+        <org.apache.aries.blueprint.core.version>1.0.0</org.apache.aries.blueprint.core.version>
+        <org.apache.aries.testsupport.unit.version>1.0.0</org.apache.aries.testsupport.unit.version>
+        <org.osgi.compendium.version>4.2.0</org.osgi.compendium.version>
+        <org.osgi.core.version>4.2.0</org.osgi.core.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.aries.application</groupId>
             <artifactId>application-modeller-standalone</artifactId>
-            <version>1.0.0</version>
+            <version>${application-modeller-standalone.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -55,16 +63,16 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-        	<groupId>org.osgi</groupId>
-        	<artifactId>org.osgi.core</artifactId>
-        	<version>4.2.0</version>
-        	<scope>test</scope>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <version>${org.osgi.core.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
-        	<groupId>org.osgi</groupId>
-        	<artifactId>org.osgi.compendium</artifactId>
-        	<version>4.2.0</version>
-        	<scope>test</scope>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+            <version>${org.osgi.compendium.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -80,17 +88,17 @@
             <groupId>org.apache.aries.testsupport</groupId>
             <artifactId>org.apache.aries.testsupport.unit</artifactId>
             <scope>test</scope>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.testsupport.unit.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
             <artifactId>org.apache.aries.blueprint.core</artifactId>
-            <version>1.0.0</version>
+            <version>${org.apache.aries.blueprint.core.version}</version>
             <exclusions>
-              <exclusion>
-                <groupId>org.apache.aries.proxy</groupId>
-                <artifactId>org.apache.aries.proxy.api</artifactId>
-              </exclusion>
+                <exclusion>
+                    <groupId>org.apache.aries.proxy</groupId>
+                    <artifactId>org.apache.aries.proxy.api</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
     </dependencies>

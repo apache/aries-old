@@ -54,7 +54,7 @@
         <aries.osgi.import.pkg>
             org.osgi.framework
         </aries.osgi.import.pkg>
-        <aries.osgi.private.pkg />
+        <aries.osgi.private.pkg/>
         <lastReleaseVersion>1.0.0</lastReleaseVersion>
     </properties>
 

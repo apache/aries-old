@@ -38,7 +38,7 @@
         <aries.osgi.activator>
             org.apache.aries.blueprint.testbundlea.Activator
         </aries.osgi.activator>
-        <aries.osgi.private.pkg />
+        <aries.osgi.private.pkg/>
         <aries.osgi.export.pkg>${project.artifactId}*</aries.osgi.export.pkg>
     </properties>
 

@@ -26,14 +26,14 @@
         <artifactId>org.apache.aries.jmx.parent</artifactId>
         <version>1.1.6-SNAPSHOT</version>
         <relativePath>../jmx-parent</relativePath>
-    </parent>  
+    </parent>
 
     <groupId>org.apache.aries.jmx</groupId>
     <artifactId>org.apache.aries.jmx.blueprint</artifactId>
     <packaging>bundle</packaging>
     <name>Apache Aries JMX Blueprint Bundle</name>
     <description>
-       This bundle contains the standalone implementation of the along with the API.
+        This bundle contains the standalone implementation of the along with the API.
     </description>
 
     <properties>

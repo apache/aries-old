@@ -43,13 +43,15 @@
     <properties>
         <aries.osgi.export.pkg>${project.artifactId}*</aries.osgi.export.pkg>
         <aries.osgi.private.pkg/>
+
+        <derby.version>10.14.2.0</derby.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.derby</groupId>
             <artifactId>derby</artifactId>
-            <version>10.14.2.0</version>
+            <version>${derby.version}</version>
         </dependency>
     </dependencies>
 

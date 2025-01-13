@@ -29,11 +29,15 @@
         Example blueprint application to demo inlined managers definitions.
     </description>
 
+    <properties>
+        <osgi.version>3.5.0.v20090520</osgi.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.eclipse</groupId>
             <artifactId>osgi</artifactId>
-            <version>3.5.0.v20090520</version>
+            <version>${osgi.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -62,8 +66,8 @@
                         <Bundle-SymbolicName>${project.artifactId};blueprint.graceperiod:=true;blueprint.timeout:= 60000</Bundle-SymbolicName>
                         <Bundle-Activator>org.apache.aries.samples.blueprint.idverifier.client.IDVerifierClientActivator</Bundle-Activator>
                         <Import-Package>
-                          org.apache.aries.samples.blueprint.idverifier.api;provide:=true,
-                          *
+                            org.apache.aries.samples.blueprint.idverifier.api;provide:=true,
+                            *
                         </Import-Package>
                     </instructions>
                 </configuration>

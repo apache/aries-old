@@ -17,16 +17,16 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.apache.aries.samples.twitter</groupId>
         <artifactId>twitter</artifactId>
         <version>1.0.1-SNAPSHOT</version>
     </parent>
 
-	<artifactId>org.apache.aries.samples.twitter.bundle</artifactId>
-	<name>Apache Aries Twitter bundle</name>
-	<packaging>bundle</packaging>
+    <artifactId>org.apache.aries.samples.twitter.bundle</artifactId>
+    <name>Apache Aries Twitter bundle</name>
+    <packaging>bundle</packaging>
 
     <properties>
         <aries.osgi.import.pkg>
@@ -50,21 +50,21 @@
         </dependency>
     </dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<configuration>
-					<instructions>
-                                             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                                             <Bundle-Activator>org.apache.aries.sample.twitter.TwitterQuery</Bundle-Activator>
-                                             <Private-Package>org.apache.aries.sample.twitter</Private-Package>
-                                             <Import-Package>org.osgi.framework;version="[1.5,2)",*</Import-Package>
-					</instructions>
-				</configuration> 
-			</plugin>
-		</plugins>
-	</build>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-Activator>org.apache.aries.sample.twitter.TwitterQuery</Bundle-Activator>
+                        <Private-Package>org.apache.aries.sample.twitter</Private-Package>
+                        <Import-Package>org.osgi.framework;version="[1.5,2)",*</Import-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
 	

@@ -51,6 +51,8 @@
         </aries.osgi.private.pkg>
         <aries.osgi.activator>org.apache.aries.web.converter.impl.Activator</aries.osgi.activator>
         <lastReleaseVersion>1.0.0</lastReleaseVersion>
+
+        <asm.version>5.0.3</asm.version>
     </properties>
 
     <dependencies>
@@ -67,7 +69,7 @@
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm-debug-all</artifactId>
-            <version>5.0.3</version>
+            <version>${asm.version}</version>
         </dependency>
     </dependencies>
 

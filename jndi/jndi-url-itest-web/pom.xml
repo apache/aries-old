@@ -20,14 +20,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    
+
     <parent>
         <groupId>org.apache.aries.jndi</groupId>
         <artifactId>jndi-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
-   
+
     <groupId>org.apache.aries.jndi</groupId>
     <artifactId>org.apache.aries.jndi.url.itest.web</artifactId>
     <name>Apache Aries JNDI Test Bundle for Aries jndi-url iTests</name>
@@ -49,27 +49,29 @@
             javax.servlet*;version=2.5,
             *
         </aries.osgi.import.pkg>
-        <aries.osgi.export.pkg />
+        <aries.osgi.export.pkg/>
+
+        <geronimo-servlet_2.5_spec.version>1.2</geronimo-servlet_2.5_spec.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.geronimo.specs</groupId>
             <artifactId>geronimo-servlet_2.5_spec</artifactId>
-            <version>1.2</version>
+            <version>${geronimo-servlet_2.5_spec.version}</version>
         </dependency>
     </dependencies>
 
     <build>
         <plugins>
             <plugin>
-              <groupId>org.apache.felix</groupId>
-              <artifactId>maven-bundle-plugin</artifactId>
-              <configuration>
-                <instructions>
-                  <Web-ContextPath>/jndiUrlItest</Web-ContextPath>
-                </instructions>
-              </configuration>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Web-ContextPath>/jndiUrlItest</Web-ContextPath>
+                    </instructions>
+                </configuration>
             </plugin>
         </plugins>
     </build>

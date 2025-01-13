@@ -34,7 +34,7 @@
     <name>Apache Aries Application API</name>
     <version>1.0.1-SNAPSHOT</version>
     <description>
-      Application API.
+        Application API.
     </description>
 
     <scm>
@@ -53,8 +53,10 @@
             org.apache.aries.application.modelling;
             org.apache.aries.application.modelling.utils,
         </aries.osgi.export.pkg>
-        <aries.osgi.private.pkg />
+        <aries.osgi.private.pkg/>
         <lastReleaseVersion>1.0.0</lastReleaseVersion>
+
+        <org.apache.aries.util.version>1.0.0</org.apache.aries.util.version>
     </properties>
 
     <dependencies>
@@ -63,10 +65,10 @@
             <artifactId>org.osgi.core</artifactId>
             <scope>provided</scope>
         </dependency>
-		<dependency>
-             <groupId>org.apache.aries</groupId>
-             <artifactId>org.apache.aries.util</artifactId>
-             <version>1.0.0</version>
+        <dependency>
+            <groupId>org.apache.aries</groupId>
+            <artifactId>org.apache.aries.util</artifactId>
+            <version>${org.apache.aries.util.version}</version>
         </dependency>
     </dependencies>
 

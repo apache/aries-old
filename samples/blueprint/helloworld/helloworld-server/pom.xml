@@ -41,8 +41,8 @@
                     <instructions>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Import-Package>
-                           org.apache.aries.samples.blueprint.helloworld.api;provide:=true,
-                           *
+                            org.apache.aries.samples.blueprint.helloworld.api;provide:=true,
+                            *
                         </Import-Package>
                     </instructions>
                 </configuration>
@@ -51,8 +51,8 @@
     </build>
     <dependencies>
         <dependency>
-                <groupId>org.apache.aries.samples.blueprint.helloworld</groupId>
-                <artifactId>org.apache.aries.samples.blueprint.helloworld.api</artifactId>
+            <groupId>org.apache.aries.samples.blueprint.helloworld</groupId>
+            <artifactId>org.apache.aries.samples.blueprint.helloworld.api</artifactId>
         </dependency>
     </dependencies>
 </project>

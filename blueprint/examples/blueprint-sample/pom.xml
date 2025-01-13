@@ -55,7 +55,7 @@
             org.osgi.service.blueprint,
             org.osgi.service.blueprint.container
         </aries.osgi.import.pkg>
-        <aries.osgi.private.pkg />
+        <aries.osgi.private.pkg/>
 
         <blueprint.api.version>1.0.0</blueprint.api.version>
     </properties>
@@ -70,11 +70,11 @@
     </profiles>
 
     <dependencies>
-		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.core</artifactId>
-			<scope>provided</scope>
-		</dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
             <artifactId>org.apache.aries.blueprint.api</artifactId>

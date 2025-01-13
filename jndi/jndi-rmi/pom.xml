@@ -34,7 +34,7 @@
     <name>Apache Aries JNDI RMI Handler</name>
     <version>1.0.1-SNAPSHOT</version>
     <description>
-      This bundle contains the JNDI RMI handler
+        This bundle contains the JNDI RMI handler
     </description>
 
     <scm>
@@ -50,7 +50,7 @@
         <aries.osgi.private.pkg>
             ${project.artifactId}*
         </aries.osgi.private.pkg>
-        <aries.osgi.export.pkg />
+        <aries.osgi.export.pkg/>
         <lastReleaseVersion>1.0.0</lastReleaseVersion>
 
         <jndi-api.version>1.0.0</jndi-api.version>
@@ -84,7 +84,7 @@
         </dependency>
     </dependencies>
 
-     <build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.aries.versioning</groupId>

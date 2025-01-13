@@ -45,7 +45,7 @@
 
     <properties>
         <!-- Export package versions are maintained in packageinfo files -->
-        <aries.osgi.export.pkg />
+        <aries.osgi.export.pkg/>
         <aries.osgi.import>
             org.apache.aries.blueprint.ext.evaluator;provide:=true,
             org.apache.commons.jexl2,
@@ -55,8 +55,10 @@
         <aries.osgi.private.pkg>
             org.apache.aries.blueprint.jexl.evaluator
         </aries.osgi.private.pkg>
-        <blueprint.core.version>1.10.0</blueprint.core.version>
         <lastReleaseVersion>1.0.0</lastReleaseVersion>
+
+        <blueprint.core.version>1.10.0</blueprint.core.version>
+        <commons-jexl.version>2.0</commons-jexl.version>
     </properties>
 
     <profiles>
@@ -82,12 +84,12 @@
         <dependency>
             <groupId>org.apache.aries.blueprint</groupId>
             <artifactId>org.apache.aries.blueprint.core</artifactId>
-            <version>1.10.0</version>
+            <version>${blueprint.core.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-jexl</artifactId>
-            <version>2.0</version>
+            <version>${commons-jexl.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>commons-logging</groupId>

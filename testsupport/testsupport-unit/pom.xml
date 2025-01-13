@@ -59,6 +59,8 @@
             org.ops4j.pax.exam.container.def*;resolution:=optional,
             *
         </aries.osgi.import.pkg>
+
+        <javax.inject.version>1</javax.inject.version>
     </properties>
 
     <dependencies>
@@ -84,7 +86,7 @@
         <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
-            <version>1</version>
+            <version>${javax.inject.version}</version>
         </dependency>
     </dependencies>
 

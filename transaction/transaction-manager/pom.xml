@@ -69,6 +69,14 @@
         <lastReleaseVersion>1.3.0</lastReleaseVersion>
         <aries.skip.version.check>false</aries.skip.version.check>
         <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
+
+        <commons-io.version>2.14.0</commons-io.version>
+        <geronimo-transaction.version>3.1.4</geronimo-transaction.version>
+        <howl.version>1.0.1-1</howl.version>
+        <junit.version>4.13.1</junit.version>
+        <maven-bundle-plugin.version>2.5.3</maven-bundle-plugin.version>
+        <maven-shade-plugin.version>1.1</maven-shade-plugin.version>
+        <spring-tx.version>2.5.6</spring-tx.version>
     </properties>
 
     <dependencies>
@@ -85,20 +93,20 @@
         <dependency>
             <groupId>org.apache.geronimo.components</groupId>
             <artifactId>geronimo-transaction</artifactId>
-            <version>3.1.4</version>
+            <version>${geronimo-transaction.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.objectweb.howl</groupId>
             <artifactId>howl</artifactId>
-            <version>1.0.1-1</version>
+            <version>${howl.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
             <optional>true</optional>
-            <version>2.5.6</version>
+            <version>${spring-tx.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -108,7 +116,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.13.1</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -119,7 +127,7 @@
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.14.0</version>
+            <version>${commons-io.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -162,7 +170,7 @@
                         <configuration>
                             <tasks>
                                 <copy todir="${project.build.directory}/sources">
-                                    <fileset dir="${basedir}/src/main/java" />
+                                    <fileset dir="${basedir}/src/main/java"/>
                                 </copy>
                             </tasks>
                         </configuration>
@@ -206,7 +214,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>1.1</version>
+                <version>${maven-shade-plugin.version}</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -258,7 +266,7 @@
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
-                <version>2.5.3</version>
+                <version>${maven-bundle-plugin.version}</version>
                 <extensions>true</extensions>
                 <inherited>true</inherited>
                 <configuration>

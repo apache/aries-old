@@ -46,7 +46,13 @@
     <properties>
         <context>/</context>
         <httpPort>8080</httpPort>
+
         <blueprint.web.version>1.0.0</blueprint.web.version>
+        <geronimo-servlet_2.5_spec.version>1.2</geronimo-servlet_2.5_spec.version>
+        <jetty-maven-plugin.version>8.1.8.v20121106</jetty-maven-plugin.version>
+        <maven-war-plugin.version>2.3</maven-war-plugin.version>
+        <tomcat6-maven-plugin.version>2.0</tomcat6-maven-plugin.version>
+        <tomcat7-maven-plugin.version>2.0</tomcat7-maven-plugin.version>
     </properties>
 
     <profiles>
@@ -62,7 +68,7 @@
         <dependency>
             <groupId>org.apache.geronimo.specs</groupId>
             <artifactId>geronimo-servlet_2.5_spec</artifactId>
-            <version>1.2</version>
+            <version>${geronimo-servlet_2.5_spec.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -81,7 +87,7 @@
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>8.1.8.v20121106</version>
+                <version>${jetty-maven-plugin.version}</version>
                 <configuration>
                     <scanIntervalSeconds>1</scanIntervalSeconds>
                     <useTestScope>true</useTestScope>
@@ -106,7 +112,7 @@
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.0</version>
+                <version>${tomcat7-maven-plugin.version}</version>
                 <configuration>
                     <port>${httpPort}</port>
                     <path>${context}</path>
@@ -119,7 +125,7 @@
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat6-maven-plugin</artifactId>
-                <version>2.0</version>
+                <version>${tomcat6-maven-plugin.version}</version>
                 <configuration>
                     <port>${httpPort}</port>
                     <path>${context}</path>
@@ -132,7 +138,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.3</version>
+                <version>${maven-war-plugin.version}</version>
                 <configuration>
                     <webResources>
                         <resource>
