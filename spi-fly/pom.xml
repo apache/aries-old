@@ -58,7 +58,7 @@
         <felix.logback.version>1.0.6</felix.logback.version>
         <junit-jupiter.version>5.11.4</junit-jupiter.version>
         <junit-platform.version>1.11.4</junit-platform.version>
-        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
         <mockito.core.version>5.9.0</mockito.core.version>
         <osgi.core.version>5.0.0</osgi.core.version>
         <osgi.test.version>1.3.0</osgi.test.version>
